@@ -58,7 +58,7 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%) rotate(180deg);
+    transform: translate(-50%,-50%) scale(0.8);
     width: 500px;
     height: 300px;
     background-color: rgb(90,90,90);
@@ -75,4 +75,44 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 50px;
+}
+#about h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    width: 90%;
+}
+#about a{
+    color: rgb(42, 188, 255);
+    transition: color 0.5s ease;
+    text-decoration: none;
+}
+#about a:hover{
+    color: rgb(127, 214, 255);
+}
+#about a:active{
+    color: rgb(176, 230, 255);
+}
+#about-ok{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 130px;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(122, 240, 255);
+    font-size: 18px;
+    color: black;
+}
+#about-ok:hover{
+    background-color: rgb(53, 231, 255);
+    color: white;
+}
+#about-ok:active{
+    background-color: rgb(0, 210, 238);
+    color: white;
 }
