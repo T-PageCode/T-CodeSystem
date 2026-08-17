@@ -67,6 +67,7 @@ body{
     opacity: 0;
     transition: transform 0.5s ease,
     opacity 0.5s ease;
+    border-radius: 25px;
 }
 #about h1{
     position: absolute;
