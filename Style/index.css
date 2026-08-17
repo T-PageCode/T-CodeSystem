@@ -54,3 +54,22 @@ body{
     transform: translate(-50%,-50%);
     color: white;
 }
+#about{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 300px;
+    background-color: rgb(90,90,90);
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+}
+#about h1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 50px;
+}

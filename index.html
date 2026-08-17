@@ -12,16 +12,10 @@
         <h1 id="text1">T-CodeSystem</h1>
         <h3 onclick="window.location.href='./index.html'">首页</h3>
         <h3>体验</h3>
-        <h3 onclick="jz()">关于</h3>
+        <h3 onclick="about()">关于</h3>
     </nav>
-    <script>
-        function jz() {
-            let t = document.getElementById('text1');
-            t.innerText = "正在加载关于界面..."
-            setTimeout(() => {
-                t.innerText = "加载失败!错误码:114514hahaha";
-            },1000)
-        }
-    </script>
+    <div id="about">
+        <h1>关于</h1>
+    </div>
 </body>
 </html>
