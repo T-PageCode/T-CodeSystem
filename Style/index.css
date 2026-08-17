@@ -104,15 +104,17 @@ body{
     height: 40px;
     border-radius: 15px;
     border: none;
-    background-color: rgb(122, 240, 255);
+    background-color: rgb(140, 242, 255);
     font-size: 18px;
     color: black;
+    transition: background-color 0.5s ease,
+    color 0.5s ease;
 }
 #about-ok:hover{
-    background-color: rgb(53, 231, 255);
+    background-color: rgb(0, 225, 255);
     color: white;
 }
 #about-ok:active{
-    background-color: rgb(0, 210, 238);
+    background-color: rgb(0, 198, 224);
     color: white;
 }
