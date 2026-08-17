@@ -42,7 +42,7 @@ body{
 #nav1-logo{
     position: absolute;
     top: 46%;
-    left: 5%;
+    left: 60px;
     transform: translate(-50%,-50%);
     height: 120%;
     pointer-events: none;
@@ -50,7 +50,7 @@ body{
 #text1{
     position: absolute;
     top: 50%;
-    left: 20%;
+    left: 220px;
     transform: translate(-50%,-50%);
     color: white;
 }
