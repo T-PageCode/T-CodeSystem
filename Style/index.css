@@ -198,3 +198,11 @@ body{
     color: white;
     width: 90%;
 }
+#copyright{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    color: white;
+}
