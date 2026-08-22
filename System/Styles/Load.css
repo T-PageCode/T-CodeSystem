@@ -1,0 +1,52 @@
+body{
+    background-color: black;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#logo{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 250px;
+    animation: rotatelogo 5s alternate;
+}
+@keyframes rotatelogo{
+    from{
+        transform: translate(-50%,-50%) rotate(-360deg);
+    }
+    to{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+#loadbar-div{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 6px;
+    background-color: transparent;
+    border-radius: 50px;
+}
+#load-bar{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 0px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50px;
+    animation: load 5s forwards;
+    animation-delay: 6s;
+}
+@keyframes load{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 300px;
+    }
+}
