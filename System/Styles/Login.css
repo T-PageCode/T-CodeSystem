@@ -1,0 +1,92 @@
+body{
+    background: linear-gradient(150deg,rgb(0,255,200),rgb(0,150,255));
+    background-attachment: fixed;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+*{
+    margin: 0;
+    font-weight: 200;
+}
+#user-name{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 50px;
+}
+#login-button{
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 150px;
+    height: 35px;
+    background-color: rgb(0,0,255);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: background-color 0.5s ease,
+    opacity 0.5s ease;
+}
+#login-button:hover{
+    background-color: rgb(0,70,255)
+}
+#login-button:active{
+    background-color: rgb(0,100,255)
+}
+#load-div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: transparent;
+    width: 250px;
+    height: 6px;
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+#load{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: white;
+    width: 0%;
+    height: 100%;
+    border-radius: 20px;
+}
+#load.animate{
+    animation: load 5s forwards;
+}
+@keyframes load{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+#user-image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 160px;
+    border-radius: 20px;
+}
+#user-image-div{
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+}
