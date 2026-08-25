@@ -78,22 +78,23 @@ launchpadBtn.onclick = () => {
 document.querySelectorAll("img").forEach((img) => {
     img.draggable = false;
 });
+function startProgram(programName) {
+    let programID = document.getElementById(programName);
+    programID.style.visibility = "visible";
+    programID.style.opacity = "1";
+    programID.style.transform = "translate(-50%,-50%) scale(1)";
+}
 function makeDraggable(targetElement) {
     let isDragging = false;
     let startX, startY, startLeft, startTop;
     targetElement.addEventListener("mousedown", (e) => {
         if (e.button !== 0) return; 
         e.preventDefault();
-        targetElement.style.transition = "none";
         startX = e.clientX;
         startY = e.clientY;
-        let rect = targetElement.getBoundingClientRect();
-        targetElement.style.left = rect.left + "px";
-        targetElement.style.top = rect.top + "px";
-        targetElement.style.transform = "none";
-        isDragging = true;
         startLeft = targetElement.offsetLeft;
         startTop = targetElement.offsetTop;
+        isDragging = true;
     });
     document.addEventListener("mousemove", (e) => {
         if (!isDragging) return;
@@ -104,15 +105,10 @@ function makeDraggable(targetElement) {
     });
     document.addEventListener("mouseup", () => {
         isDragging = false;
+        document.removeEventListener("mousemove", onMouseMove);
     });
 }
 const allWindows = document.querySelectorAll('.window');
 allWindows.forEach((win) => {
     makeDraggable(win);
 });
-function startProgram(programName) {
-    let programID = document.getElementById(programName);
-    programID.style.visibility = "visible";
-    programID.style.opacity = "1";
-    programID.style.transform = "translate(-50%,-50%) scale(1)";
-}
