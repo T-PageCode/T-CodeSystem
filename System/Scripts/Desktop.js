@@ -1,15 +1,25 @@
 let hideTimer = null;
+let launchpadTime = null;
 const mouse = document.getElementById("mouse");
 const menu = document.getElementById("menu");
 const githubLink = document.getElementById("github-link")
 const launchpad = document.getElementById("launchpad");
 const launchpadBtn = document.getElementById("launchpad-btn");
 const browser = document.getElementById("browser");
+const launchpadProgram = document.querySelectorAll(".launchpad-program");
 function hiddenMenu() {
     menu.style.opacity = "0";
     menu.style.transform = "translate(-50%,-50%) scale(0.8)";
     setTimeout(() => {
         menu.style.visibility = "hidden";
+    },500)
+}
+
+function hiddenLaunchpad() {
+    launchpad.style.opacity = "0";
+    launchpad.style.transform = "translate(-50%,-50%) scale(0.8)";
+    launchpadTime = setTimeout(() => {
+        launchpad.style.visibility = "hidden";
     },500)
 }
 githubLink.onclick = () => {
@@ -59,7 +69,6 @@ document.addEventListener("mousedown",() => {
 document.addEventListener("mouseup",() => {
     mouse.style.transform = "translate(-50%,-50%) scale(1)";
 })
-let launchpadTime = null;
 launchpadBtn.onclick = () => {
     clearTimeout(launchpadTime)
     if (launchpad.style.opacity === "1" || launchpad.style.transform === "translate(-50%,-50%) scale(1)") {
@@ -83,6 +92,7 @@ function startProgram(programName) {
     programID.style.visibility = "visible";
     programID.style.opacity = "1";
     programID.style.transform = "translate(-50%,-50%) scale(1)";
+    hiddenLaunchpad();
 }
 function makeDraggable(targetElement) {
     let isDragging = false;
@@ -105,7 +115,7 @@ function makeDraggable(targetElement) {
     });
     document.addEventListener("mouseup", () => {
         isDragging = false;
-        document.removeEventListener("mousemove", onMouseMove);
+        document.removeEventListener("mousemove");
     });
 }
 const allWindows = document.querySelectorAll('.window');
