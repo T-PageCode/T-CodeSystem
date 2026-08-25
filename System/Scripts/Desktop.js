@@ -74,3 +74,6 @@ launchpadBtn.onclick = () => {
         launchpad.style.transform = "translate(-50%,-50%) scale(1)";
     }
 }
+document.querySelectorAll("img").forEach((img) => {
+    img.draggable = false;
+});

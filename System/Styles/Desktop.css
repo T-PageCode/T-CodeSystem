@@ -74,6 +74,40 @@ body{
     transition: transform 0.5s ease,
     opacity 0.5s ease;
 }
+#launchpad-browser{
+    top: 20%;
+    left: 40%;
+}
+.launchpad-program{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 15px;
+    transition: background-color 0.5s ease;
+}
+.launchpad-program:hover{
+    background-color: rgb(255,255,255,0.3);
+}
+.launchpad-program:active{
+    background-color: rgb(255,255,255,0.5);
+}
+.launchpad-program-image{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+}
+.launchpad-program-text{
+    position: absolute;
+    top: 82.5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 17px;
+    white-space: nowrap;
+}
 #mouse{
     position: fixed;
     transform: translate(-50%,-50%);
