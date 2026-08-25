@@ -36,6 +36,16 @@ document.addEventListener("click",(e) => {
         menu.style.visibility = "hidden";
     },500)
 })
+document.addEventListener("click",(e) => {
+    if (e.target.closest("#launchpad") || e.target.closest("#launchpad-btn")) {
+        return;
+    }
+    launchpad.style.opacity = "0";
+    launchpad.style.transform = "translate(-50%,-50%) scale(0.8)";
+    launchpadTime = setTimeout(() => {
+        launchpad.style.visibility = "hidden";
+    },500)
+})
 document.addEventListener("mousemove",(e) => {
     let x = e.clientX + "px";
     let y = e.clientY + "px";
