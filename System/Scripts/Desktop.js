@@ -1,7 +1,9 @@
 let hideTimer = null;
 const mouse = document.getElementById("mouse");
 const menu = document.getElementById("menu");
-const githubLink = document.getElementById("github-link");
+const githubLink = document.getElementById("github-link")
+const launchpad = document.getElementById("launchpad");
+const launchpadBtn = document.getElementById("launchpad-btn");
 function hiddenMenu() {
     menu.style.opacity = "0";
     menu.style.transform = "translate(-50%,-50%) scale(0.8)";
@@ -46,3 +48,19 @@ document.addEventListener("mousedown",() => {
 document.addEventListener("mouseup",() => {
     mouse.style.transform = "translate(-50%,-50%) scale(1)";
 })
+let launchpadTime = null;
+launchpadBtn.onclick = () => {
+    clearTimeout(launchpadTime)
+    if (launchpad.style.opacity === "1" || launchpad.style.transform === "translate(-50%,-50%) scale(1)") {
+        launchpad.style.opacity = "0";
+        launchpad.style.transform = "translate(-50%,-50%) scale(0.8)";
+        launchpadTime = setTimeout(() => {
+            launchpad.style.visibility = "hidden";
+        },500)
+    }
+    else {
+        launchpad.style.visibility = "visible";
+        launchpad.style.opacity = "1";
+        launchpad.style.transform = "translate(-50%,-50%) scale(1)";
+    }
+}

@@ -34,7 +34,7 @@ body{
     z-index: 1;
     border-radius: 50px;
 }
-#launchpad{
+#launchpad-btn{
     position: absolute;
     top: 50%;
     left: 40%;
@@ -49,14 +49,30 @@ body{
     align-items: center;
     justify-content: center;
 }
-#launchpad:hover{
+#launchpad-btn:hover{
     background-color: rgb(255,255,255,0.3);
 }
-#launchpad:active{
+#launchpad-btn:active{
     background-color: rgb(255,255,255,0.5);
 }
-#launchpad img{
+#launchpad-btn img{
     height: 120%;
+}
+#launchpad{
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.8);
+    width: 700px;
+    height: 450px;
+    background-color: rgb(255,255,255,0.5);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 25px;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.5s ease,
+    opacity 0.5s ease;
 }
 #mouse{
     position: fixed;
