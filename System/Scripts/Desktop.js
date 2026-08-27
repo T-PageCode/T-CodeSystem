@@ -1,5 +1,6 @@
 let hideTimer = null;
 let launchpadTime = null;
+let programTimeout = null;
 const mouse = document.getElementById("mouse");
 const menu = document.getElementById("menu");
 const githubLink = document.getElementById("github-link")
@@ -89,6 +90,7 @@ document.querySelectorAll("img").forEach((img) => {
 });
 function startProgram(programName) {
     let programID = document.getElementById(programName);
+    clearTimeout(programTimeout);
     programID.style.visibility = "visible";
     programID.style.opacity = "1";
     programID.style.transform = "translate(-50%,-50%) scale(1)";
@@ -115,10 +117,18 @@ function makeDraggable(targetElement) {
     });
     document.addEventListener("mouseup", () => {
         isDragging = false;
-        document.removeEventListener("mousemove");
     });
 }
 const allWindows = document.querySelectorAll('.window');
 allWindows.forEach((win) => {
     makeDraggable(win);
 });
+function closeWindow(windowId) {
+    clearTimeout(programTimeout);
+    let documentWinId = document.getElementById(windowId);
+    documentWinId.style.opacity = "0";
+    documentWinId.style.transform = "translate(-50%,-50%) scale(0.8)";
+    programTimeout = setTimeout(() => {
+        documentWinId.style.visibility = "hidden";
+    },500)
+}

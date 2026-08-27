@@ -127,6 +127,28 @@ body{
     visibility: hidden;
     transition: opacity 0.5s ease,
     transform 0.5s ease;
+    overflow: hidden;
+}
+.window-close{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 30px;
+    width: 70px;
+    height: 30px;
+    transition: background-color 0.5s ease;
+}
+.window-close:hover{
+    background-color: rgb(255,255,255,0.3);
+}
+.window-close:active{
+    background-color: rgb(255,255,255,0.5);
+}
+.window-close span{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 #shutdown{
     position: absolute;
