@@ -131,7 +131,7 @@ body{
 #shutdown{
     position: absolute;
     top: 90%;
-    left: 90%;
+    left: 82%;
     transform: translate(-50%,-50%);
     width: 50px;
     height: 50px;
@@ -144,6 +144,24 @@ body{
     background-color: rgb(255,255,255,0.3);
 }
 #shutdown:active{
+    background-color: rgb(255,255,255,0.5);
+}
+#restart{
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 50px;
+    transition: background-color 0.5s ease;
+}
+#restart:hover{
+    background-color: rgb(255,255,255,0.3);
+}
+#restart:active{
     background-color: rgb(255,255,255,0.5);
 }
 #mouse{
