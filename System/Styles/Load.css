@@ -5,6 +5,9 @@ body{
     -ms-user-select: none;
     user-select: none;
 }
+*{
+    cursor: none;
+}
 #logo{
     position: absolute;
     top: 40%;

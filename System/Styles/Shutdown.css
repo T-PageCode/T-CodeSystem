@@ -5,6 +5,9 @@ body{
     -ms-user-select: none;
     user-select: none;
 }
+*{
+    cursor: none;
+}
 h1{
     position: absolute;
     top: 43%;
