@@ -56,8 +56,12 @@ body{
 #launchpad-btn:active{
     background-color: rgb(255,255,255,0.5);
 }
+#launchpad-btn:active img{
+    transform: scale(0.7);
+}
 #launchpad-btn img{
     height: 120%;
+    transition: transform 0.3s ease;
 }
 #launchpad{
     position: absolute;
