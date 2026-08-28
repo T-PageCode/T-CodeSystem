@@ -16,9 +16,9 @@ function hiddenMenu() {
         menu.style.visibility = "hidden";
     },500)
 }
-function showOrHiddenMouse() {
+function checkShowMouse() {
     clearTimeout(mouseTimeout);
-    if (mouse.style.opacity === "0" || mouse.style.visibility === "hidden") {
+    if (localStorage.getItem("showMouse") === "true") {
         mouse.style.visibility = "visible";
         mouse.style.opacity = "1";
         mouse.style.transform = "translate(-50%,-50%) scale(1)";
@@ -29,6 +29,24 @@ function showOrHiddenMouse() {
         mouseTimeout = setTimeout(() => {
             mouse.style.visibility = "hidden";
         },500)
+    }
+}
+checkShowMouse();
+function showOrHiddenMouse() {
+    clearTimeout(mouseTimeout);
+    if (mouse.style.opacity === "0" || mouse.style.visibility === "hidden") {
+        mouse.style.visibility = "visible";
+        mouse.style.opacity = "1";
+        mouse.style.transform = "translate(-50%,-50%) scale(1)";
+        localStorage.setItem("showMouse","true");
+    }
+    else {
+        mouse.style.opacity = "0";
+        mouse.style.transform = "translate(-50%,-50%) scale(0)";
+        mouseTimeout = setTimeout(() => {
+            mouse.style.visibility = "hidden";
+        },500)
+        localStorage.setItem("showMouse","false");
     }
 }
 function shutdown() {
