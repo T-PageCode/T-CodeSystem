@@ -126,7 +126,9 @@ body{
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease,
-    transform 0.5s ease;
+    transform 0.5s ease,
+    width 0.5s ease,
+    height 0.5s ease;
     overflow: hidden;
 }
 .window-close{
@@ -134,7 +136,7 @@ body{
     top: 0px;
     right: 0px;
     font-size: 30px;
-    width: 70px;
+    width: 50px;
     height: 30px;
     transition: background-color 0.5s ease;
 }
@@ -147,6 +149,30 @@ body{
 .window-close span{
     position: absolute;
     top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.window-max{
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    font-size: 20px;
+    width: 50px;
+    height: 30px;
+    transition: background-color 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.window-max:hover{
+    background-color: rgb(255,255,255,0.3);
+}
+.window-max:active{
+    background-color: rgb(255,255,255,0.5);
+}
+.window-max span{
+    position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }

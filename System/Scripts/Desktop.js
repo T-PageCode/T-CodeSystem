@@ -96,8 +96,9 @@ function startProgram(programName) {
     programID.style.transform = "translate(-50%,-50%) scale(1)";
     hiddenLaunchpad();
 }
-function makeDraggable(targetElement) {
-    let isDragging = false;
+let isDragging = null;
+/*function makeDraggable(targetElement) {
+    isDragging = false;
     let startX, startY, startLeft, startTop;
     targetElement.addEventListener("mousedown", (e) => {
         if (e.button !== 0) return; 
@@ -117,6 +118,34 @@ function makeDraggable(targetElement) {
     });
     document.addEventListener("mouseup", () => {
         isDragging = false;
+    });
+}*/
+let globalDragging = false;
+function makeDraggable(targetElement) {
+    globalDragging = false;
+    let startX, startY, startLeft, startTop;
+    function onMouseMove(e) {
+        if (!globalDragging) return;
+        let diffX = e.clientX - startX;
+        let diffY = e.clientY - startY;
+        targetElement.style.left = (startLeft + diffX) + "px";
+        targetElement.style.top = (startTop + diffY) + "px";
+    }
+    function onMouseUp() {
+        globalDragging = false;
+        document.removeEventListener("mousemove", onMouseMove);
+        document.removeEventListener("mouseup", onMouseUp);
+    }
+    targetElement.addEventListener("mousedown", (e) => {
+        if (e.button !== 0) return; 
+        e.preventDefault();
+        startX = e.clientX;
+        startY = e.clientY;
+        startLeft = targetElement.offsetLeft;
+        startTop = targetElement.offsetTop;
+        globalDragging = true;
+        document.addEventListener("mousemove", onMouseMove);
+        document.addEventListener("mouseup", onMouseUp);
     });
 }
 const allWindows = document.querySelectorAll('.window');
