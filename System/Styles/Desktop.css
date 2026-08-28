@@ -6,6 +6,7 @@ body{
     -moz-user-select: none;
     -webkit-user-select: none;
     overflow: hidden;
+    transition: opacity 0.5s ease;
 }
 *{
     margin: 0;
@@ -224,7 +225,7 @@ body{
 }
 #mouse{
     position: fixed;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) scale(1);
     width: 50px;
     height: 50px;
     background-color: rgba(66, 255, 66, 0.5);
@@ -233,7 +234,10 @@ body{
     border-radius: 50%;
     z-index: 3;
     pointer-events: none;
-    transition: transform 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+    transition: transform 0.3s ease,
+    opacity 0.3s ease;
 }
 #menu{
     position: fixed;

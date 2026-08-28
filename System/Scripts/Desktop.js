@@ -1,6 +1,7 @@
 let hideTimer = null;
 let launchpadTime = null;
 let programTimeout = null;
+let mouseTimeout = null;
 const mouse = document.getElementById("mouse");
 const menu = document.getElementById("menu");
 const githubLink = document.getElementById("github-link")
@@ -11,11 +12,37 @@ const launchpadProgram = document.querySelectorAll(".launchpad-program");
 function hiddenMenu() {
     menu.style.opacity = "0";
     menu.style.transform = "translate(-50%,-50%) scale(0.8)";
-    setTimeout(() => {
+    hideTimer = setTimeout(() => {
         menu.style.visibility = "hidden";
     },500)
 }
-
+function showOrHiddenMouse() {
+    clearTimeout(mouseTimeout);
+    if (mouse.style.opacity === "0" || mouse.style.visibility === "hidden") {
+        mouse.style.visibility = "visible";
+        mouse.style.opacity = "1";
+        mouse.style.transform = "translate(-50%,-50%) scale(1)";
+    }
+    else {
+        mouse.style.opacity = "0";
+        mouse.style.transform = "translate(-50%,-50%) scale(0)";
+        mouseTimeout = setTimeout(() => {
+            mouse.style.visibility = "hidden";
+        },500)
+    }
+}
+function shutdown() {
+    document.body.style.opacity = "0";
+    setTimeout(() => {
+        window.location.href = "./Shutdown.html";
+    },1000);
+}
+function restart() {
+    document.body.style.opacity = "0";
+    setTimeout(() => {
+        window.location.href = "./Restart.html";
+    },1000);
+}
 function hiddenLaunchpad() {
     launchpad.style.opacity = "0";
     launchpad.style.transform = "translate(-50%,-50%) scale(0.8)";
