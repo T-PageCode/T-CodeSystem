@@ -97,12 +97,13 @@ function startProgram(programName) {
     hiddenLaunchpad();
 }
 let isDragging = null;
-/*function makeDraggable(targetElement) {
+function makeDraggable(targetElement) {
     isDragging = false;
     let startX, startY, startLeft, startTop;
     targetElement.addEventListener("mousedown", (e) => {
         if (e.button !== 0) return; 
         e.preventDefault();
+        targetElement.style.transition = "none";
         startX = e.clientX;
         startY = e.clientY;
         startLeft = targetElement.offsetLeft;
@@ -117,37 +118,8 @@ let isDragging = null;
         targetElement.style.top = (startTop + diffY) + "px";
     });
     document.addEventListener("mouseup", () => {
-        isDragging = false;
-    });
-}*/
-let globalDragging = false;
-function makeDraggable(targetElement) {
-    globalDragging = false;
-    let startX, startY, startLeft, startTop;
-    function onMouseMove(e) {
-        if (!globalDragging) return;
-        targetElement.style.transition = "none";
-        let diffX = e.clientX - startX;
-        let diffY = e.clientY - startY;
-        targetElement.style.left = (startLeft + diffX) + "px";
-        targetElement.style.top = (startTop + diffY) + "px";
-    }
-    function onMouseUp() {
-        globalDragging = false;
         targetElement.style.transition = "top 0.5s ease,left 0.5s ease,opacity 0.5s ease,transform 0.5s ease,width 0.5s ease,height 0.5s ease";
-        document.removeEventListener("mousemove", onMouseMove);
-        document.removeEventListener("mouseup", onMouseUp);
-    }
-    targetElement.addEventListener("mousedown", (e) => {
-        if (e.button !== 0) return; 
-        e.preventDefault();
-        startX = e.clientX;
-        startY = e.clientY;
-        startLeft = targetElement.offsetLeft;
-        startTop = targetElement.offsetTop;
-        globalDragging = true;
-        document.addEventListener("mousemove", onMouseMove);
-        document.addEventListener("mouseup", onMouseUp);
+        isDragging = false;
     });
 }
 const allWindows = document.querySelectorAll('.window');
