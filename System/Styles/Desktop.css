@@ -128,7 +128,9 @@ body{
     transition: opacity 0.5s ease,
     transform 0.5s ease,
     width 0.5s ease,
-    height 0.5s ease;
+    height 0.5s ease,
+    top 0.5s ease,
+    left 0.5s ease;
     overflow: hidden;
 }
 .window-close{
@@ -151,6 +153,14 @@ body{
     top: 45%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+#browser.max{
+    position: fixed !important;
+    top: 0px !important;
+    left: 50% !important;
+    width: 100% !important;
+    height: calc(100% - 90px) !important;
+    transform: translate(-50%,0) !important;
 }
 .window-max{
     position: absolute;

@@ -126,6 +126,7 @@ function makeDraggable(targetElement) {
     let startX, startY, startLeft, startTop;
     function onMouseMove(e) {
         if (!globalDragging) return;
+        targetElement.style.transition = "none";
         let diffX = e.clientX - startX;
         let diffY = e.clientY - startY;
         targetElement.style.left = (startLeft + diffX) + "px";
@@ -133,6 +134,7 @@ function makeDraggable(targetElement) {
     }
     function onMouseUp() {
         globalDragging = false;
+        targetElement.style.transition = "top 0.5s ease,left 0.5s ease,opacity 0.5s ease,transform 0.5s ease,width 0.5s ease,height 0.5s ease";
         document.removeEventListener("mousemove", onMouseMove);
         document.removeEventListener("mouseup", onMouseUp);
     }
@@ -160,4 +162,13 @@ function closeWindow(windowId) {
     programTimeout = setTimeout(() => {
         documentWinId.style.visibility = "hidden";
     },500)
+}
+function maxWindow(windowId) {
+    let win = document.getElementById(windowId);
+    if (win.classList.contains("max")) {
+        win.classList.remove("max")
+    }
+    else {
+        win.classList.add("max")
+    }
 }
