@@ -171,7 +171,7 @@ body{
     top: 0px !important;
     left: 50% !important;
     width: 100% !important;
-    height: calc(100% - 90px) !important;
+    height: calc(100% - 100px) !important;
     transform: translate(-50%,0) !important;
 }
 .window-max{
