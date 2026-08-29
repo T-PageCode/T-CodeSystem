@@ -102,12 +102,16 @@ body{
 .launchpad-program:active{
     background-color: rgb(255,255,255,0.5);
 }
+.launchpad-program:active img{
+    transform: translate(-50%,-50%) scale(0.7);
+}
 .launchpad-program-image{
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
     height: 100%;
+    transition: transform 0.3s ease;
 }
 .launchpad-program-text{
     position: absolute;
