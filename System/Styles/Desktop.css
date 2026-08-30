@@ -83,9 +83,40 @@ body{
     opacity 0.5s ease;
     z-index: 1;
 }
+#launchpad-user-div{
+    position: absolute;
+    top: 25px;
+    left: 50px;
+    width: 150px;
+    height: 150px;
+}
+#launchpad-user-div h1{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 25px;
+}
+#launchpad-user-image{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border-radius: 25px;
+}
+#launchpad-user-image img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 90px;
+    transform: translate(-50%,-50%);
+}
 #launchpad-browser{
     top: 20%;
-    left: 40%;
+    left: 45%;
 }
 .launchpad-program{
     position: absolute;
