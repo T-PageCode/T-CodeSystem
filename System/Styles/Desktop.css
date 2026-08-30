@@ -1,12 +1,73 @@
 body{
-    background: linear-gradient(180deg,rgb(0, 255, 234),rgb(0,150,255));
+    background: linear-gradient(180deg,
+    rgb(0, 255, 234),rgb(0,150,255),
+    rgb(0, 187, 171), rgb(0, 103, 177));
+    background-size: 100% 250%;
     background-attachment: fixed;
     user-select: none;
     -ms-user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     overflow: hidden;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease,
+    background-position 0.5s ease;
+}
+body.dark{
+    background-position: 0% 100%;
+}
+body.dark #taskbar{
+    background-color: rgba(0,0,0,0.5);
+}
+body.dark #launchpad-btn:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+body.dark #launchpad-btn:active{
+    background-color: rgba(0,0,0,0.5);
+}
+body.dark #launchpad{
+    background-color: rgba(0,0,0,0.5);
+}
+body.dark .launchpad-program:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+body.dark .launchpad-program:active{
+    background-color: rgba(0,0,0,0.5)
+}
+body.dark .launchpad-program-text{
+    color: white;
+}
+body.dark #launchpad-user-image{
+    background-color: black;
+}
+body.dark #launchpad-user-div h1{
+    color: white;
+}
+body.dark #shutdown,body.dark #restart{
+    color: white;
+}
+body.dark #shutdown:hover,body.dark #restart:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+body.dark #shutdown:active,body.dark #restart:active{
+    background-color: rgba(0,0,0,0.5);
+}
+body.dark .window{
+    background-color: rgba(0,0,0,0.5);
+}
+body.dark .window-close,body.dark .window-max{
+    color: white;
+}
+body.dark #menu{
+    background-color: rgba(0,0,0,0.6);
+}
+body.dark .menu-item{
+    color: white;
+}
+body.dark .menu-item:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+body.dark .menu-item:active{
+    background-color: rgba(0,0,0,0.5)
 }
 *{
     margin: 0;
@@ -34,6 +95,7 @@ body{
     -webkit-backdrop-filter: blur(5px);
     z-index: 2;
     border-radius: 50px;
+    transition: background-color 0.5s ease;
 }
 #launchpad-btn{
     position: absolute;
@@ -52,11 +114,11 @@ body{
     justify-content: center;
 }
 #launchpad-btn:hover{
-    background-color: rgb(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.3);
     filter: brightness(1.2);
 }
 #launchpad-btn:active{
-    background-color: rgb(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.5);
     filter: brightness(1.2);
 }
 #launchpad-btn:active img{
@@ -80,7 +142,8 @@ body{
     visibility: hidden;
     opacity: 0;
     transition: transform 0.5s ease,
-    opacity 0.5s ease;
+    opacity 0.5s ease,
+    background-color 0.5s ease;
     z-index: 1;
 }
 #launchpad-user-div{
@@ -96,6 +159,7 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 25px;
+    transition: color 0.5s ease;
 }
 #launchpad-user-image{
     position: absolute;
@@ -106,6 +170,7 @@ body{
     height: 90px;
     background-color: white;
     border-radius: 25px;
+    transition: background-color 0.5s ease;
 }
 #launchpad-user-image img{
     position: absolute;
@@ -151,6 +216,8 @@ body{
     transform: translate(-50%,-50%);
     font-size: 17px;
     white-space: nowrap;
+    color: black;
+    transition: color 0.5s ease;
 }
 #browser{
     width: 600px;
@@ -162,7 +229,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%) scale(0.8);
-    background-color: rgb(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.5);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     z-index: 0;
@@ -173,7 +240,8 @@ body{
     width 0.5s ease,
     height 0.5s ease,
     top 0.5s ease,
-    left 0.5s ease;
+    left 0.5s ease,
+    background-color 0.5s ease;
     overflow: hidden;
 }
 .window-close{
@@ -183,13 +251,14 @@ body{
     font-size: 30px;
     width: 50px;
     height: 30px;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease,
+    color 0.5s ease;
 }
 .window-close:hover{
-    background-color: rgb(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.3);
 }
 .window-close:active{
-    background-color: rgb(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.5);
 }
 .window-close span{
     position: absolute;
@@ -212,7 +281,8 @@ body{
     font-size: 20px;
     width: 50px;
     height: 30px;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease,
+    color 0.5s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,7 +309,6 @@ body{
     border-radius: 15px;
     text-align: center;
     line-height: 50px;
-    transition: background-color 0.5s ease;
 }
 #shutdown:hover{
     background-color: rgb(255,255,255,0.3);
@@ -257,13 +326,16 @@ body{
     border-radius: 15px;
     text-align: center;
     line-height: 50px;
-    transition: background-color 0.5s ease;
 }
 #restart:hover{
     background-color: rgb(255,255,255,0.3);
 }
 #restart:active{
     background-color: rgb(255,255,255,0.5);
+}
+#shutdown,#restart{
+    transition: background-color 0.5s ease,
+    color 0.5s ease;
 }
 #mouse{
     position: fixed;
@@ -295,7 +367,8 @@ body{
     transition: opacity 0.5s ease,
     transform 0.5s ease,
     top 0.5s ease,
-    left 0.5s ease;
+    left 0.5s ease,
+    background-color 0.5s ease;
     z-index: 1;
 }
 .menu-item{
@@ -308,7 +381,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease,
+    color 0.5s ease;
 }
 .menu-item:hover{
     background-color: rgb(255,255,255,0.3);

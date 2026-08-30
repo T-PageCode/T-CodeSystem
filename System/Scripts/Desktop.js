@@ -9,6 +9,16 @@ const launchpad = document.getElementById("launchpad");
 const launchpadBtn = document.getElementById("launchpad-btn");
 const browser = document.getElementById("browser");
 const launchpadProgram = document.querySelectorAll(".launchpad-program");
+function loadTheme() {
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark") {
+        document.body.classList.add("dark");
+    }
+    else {
+        document.body.classList.remove("dark");
+    }
+}
+loadTheme();
 function hiddenMenu() {
     menu.style.opacity = "0";
     menu.style.transform = "translate(-50%,-50%) scale(0.8)";
@@ -163,7 +173,7 @@ function makeDraggable(targetElement) {
         targetElement.style.top = (startTop + diffY) + "px";
     });
     document.addEventListener("mouseup", () => {
-        targetElement.style.transition = "top 0.5s ease,left 0.5s ease,opacity 0.5s ease,transform 0.5s ease,width 0.5s ease,height 0.5s ease";
+        targetElement.style.transition = "";
         isDragging = false;
     });
 }
@@ -187,5 +197,14 @@ function maxWindow(windowId) {
     }
     else {
         win.classList.add("max")
+    }
+}
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+    if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme","dark");
+    }
+    else {
+        localStorage.setItem("theme","light");
     }
 }
