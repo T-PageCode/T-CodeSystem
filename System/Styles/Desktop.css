@@ -256,8 +256,8 @@ body{
     width: 180px;
     height: 300px;
     background-color: rgb(255,255,255,0.6);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     border-radius: 25px;
     opacity: 0;
     visibility: hidden;
