@@ -208,3 +208,16 @@ function toggleDarkMode() {
         localStorage.setItem("theme","light");
     }
 }
+function toggleFullScreen() {
+    if (document.fullscreenElement) {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+    else {
+        const elements = document.documentElement;
+        if (elements.requestFullscreen) {
+            elements.requestFullscreen();
+        }
+    }
+}
