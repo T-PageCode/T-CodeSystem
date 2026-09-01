@@ -42,6 +42,16 @@ function checkShowMouse() {
     }
 }
 checkShowMouse();
+function checkTransition() {
+    const elements = document.querySelectorAll("*");
+    if (localStorage.getItem("transition") === "false") {
+        elements.forEach(e => e.style.transition = "none");
+    }
+    else {
+        elements.forEach(e => e.style.transition = "");
+    }
+}
+checkTransition();
 function showOrHiddenMouse() {
     clearTimeout(mouseTimeout);
     if (mouse.style.opacity === "0" || mouse.style.visibility === "hidden") {
@@ -219,5 +229,17 @@ function toggleFullScreen() {
         if (elements.requestFullscreen) {
             elements.requestFullscreen();
         }
+    }
+}
+function toggleNoTransition() {
+    const elements = document.querySelectorAll("*");
+    const transitionDisabled = localStorage.getItem("transition") === "false";
+    if (transitionDisabled) {
+        elements.forEach(e => e.style.transition = "");
+        localStorage.setItem("transition","true");
+    }
+    else {
+        elements.forEach(e => e.style.transition = "none");
+        localStorage.setItem("transition","false");
     }
 }
