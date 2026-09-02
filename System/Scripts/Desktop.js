@@ -243,3 +243,21 @@ function toggleNoTransition() {
         localStorage.setItem("transition","false");
     }
 }
+const timeMain = document.getElementById("time-main");
+const timeDate = document.getElementById("time-date");
+function getTime() {
+    const dateData = new Date();
+    let year = dateData.getFullYear();
+    let month = dateData.getMonth() + 1;
+    let day = dateData.getDate();
+    let hour = dateData.getHours();
+    let minute = dateData.getMinutes();
+    let second = dateData.getSeconds();
+    hour = hour.toString().padStart(2,"0");
+    minute = minute.toString().padStart(2,"0");
+    second = second.toString().padStart(2,"0");
+    timeMain.innerText = `${year}年${month}月${day}日`;
+    timeDate.innerText = `${hour}:${minute}:${second}`;
+};
+getTime();
+setInterval(getTime,1000);

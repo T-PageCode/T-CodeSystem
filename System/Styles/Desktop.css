@@ -69,6 +69,10 @@ body.dark .menu-item:hover{
 body.dark .menu-item:active{
     background-color: rgba(0,0,0,0.5)
 }
+body.dark #time-div{
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+}
 *{
     margin: 0;
     padding: 0;
@@ -389,4 +393,30 @@ body.dark .menu-item:active{
 }
 .menu-item:active{
     background-color: rgb(255,255,255,0.5);
+}
+#time-div{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 250px;
+    height: 150px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 25px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    padding-top: 20px;
+    color: black;
+    box-sizing: border-box;
+    transition: background-color 0.5s ease,
+    color 0.5s ease;
+}
+#time-div h1{
+    margin-top: 5px;
+}
+#time-main{
+    font-size: 25px;
+}
+#time-date{
+    font-size: 22.5px;
 }
