@@ -70,7 +70,7 @@ body.dark .menu-item:active{
     background-color: rgba(0,0,0,0.5)
 }
 body.dark #time-div{
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.5);
     color: white;
 }
 *{
