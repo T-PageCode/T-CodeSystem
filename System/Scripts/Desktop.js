@@ -2,6 +2,7 @@ let hideTimer = null;
 let launchpadTime = null;
 let programTimeout = null;
 let mouseTimeout = null;
+const transitionDisabled = localStorage.getItem("transition") === "false";
 const mouse = document.getElementById("mouse");
 const menu = document.getElementById("menu");
 const githubLink = document.getElementById("github-link")
@@ -183,7 +184,12 @@ function makeDraggable(targetElement) {
         targetElement.style.top = (startTop + diffY) + "px";
     });
     document.addEventListener("mouseup", () => {
-        targetElement.style.transition = "";
+        if (localStorage.getItem("transition") === "false") {
+            targetElement.style.transition = "none";
+        }
+        else {
+            targetElement.style.transition = "";
+        }
         isDragging = false;
     });
 }
@@ -233,7 +239,6 @@ function toggleFullScreen() {
 }
 function toggleNoTransition() {
     const elements = document.querySelectorAll("*");
-    const transitionDisabled = localStorage.getItem("transition") === "false";
     if (transitionDisabled) {
         elements.forEach(e => e.style.transition = "");
         localStorage.setItem("transition","true");
