@@ -110,8 +110,7 @@ body.dark #time-div{
     width: 60px;
     background-color: transparent;
     overflow: hidden;
-    transition: background-color 0.5s ease,
-    filter 0.5s ease;
+    transition: background-color 0.5s ease;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -119,18 +118,21 @@ body.dark #time-div{
 }
 #launchpad-btn:hover{
     background-color: rgba(255,255,255,0.3);
-    filter: brightness(1.2);
 }
 #launchpad-btn:active{
     background-color: rgba(255,255,255,0.5);
+}
+#launchpad-btn:hover img{
     filter: brightness(1.2);
 }
 #launchpad-btn:active img{
     transform: scale(0.7);
+    filter: brightness(1.4);
 }
 #launchpad-btn img{
     height: 120%;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease,
+    filter 0.5s ease;
 }
 #launchpad{
     position: absolute;
