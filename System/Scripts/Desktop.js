@@ -10,6 +10,8 @@ const launchpad = document.getElementById("launchpad");
 const launchpadBtn = document.getElementById("launchpad-btn");
 const browser = document.getElementById("browser");
 const launchpadProgram = document.querySelectorAll(".launchpad-program");
+const login = document.getElementById("login");
+const loginButton = document.getElementById("login-button");
 function loadTheme() {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {
@@ -94,8 +96,11 @@ githubLink.onclick = () => {
     hiddenMenu();
 }
 document.addEventListener("contextmenu",(e) => {
-    clearTimeout(hideTimer);
     e.preventDefault();
+    if (e.target.closest("#login")) {
+        return;
+    }
+    clearTimeout(hideTimer);
     let menuX = e.clientX;
     let menuY = e.clientY;
     menu.style.top = menuY + "px";
@@ -105,10 +110,10 @@ document.addEventListener("contextmenu",(e) => {
     menu.style.transform = "translate(-50%,-50%) scale(1)";
 })
 document.addEventListener("click",(e) => {
-    clearTimeout(hideTimer)
     if (e.target.closest("#menu")) {
         return;
     }
+    clearTimeout(hideTimer);
     menu.style.transform = "translate(-50%,-50%) scale(0.8)";
     menu.style.opacity = "0";
     hideTimer = setTimeout(() => {
@@ -163,40 +168,47 @@ function startProgram(programName) {
     programID.style.transform = "translate(-50%,-50%) scale(1)";
     hiddenLaunchpad();
 }
-let isDragging = null;
-function makeDraggable(targetElement) {
-    isDragging = false;
-    let startX, startY, startLeft, startTop;
-    targetElement.addEventListener("mousedown", (e) => {
-        if (e.button !== 0) return; 
+let windowToolControl = null;
+function windowTool(windowElement) {
+    windowToolControl = false;
+    let startX,startY,startLeft,startTop;
+    windowElement.addEventListener("mousedown", (e) => {
+        if (e.button !== 0){
+            return;
+        }
+        if (e.target.closest(".window-close") || e.target.closest(".window-max")) {
+            return;
+        }
         e.preventDefault();
-        targetElement.style.transition = "none";
+        windowElement.style.transition = "none";
         startX = e.clientX;
         startY = e.clientY;
-        startLeft = targetElement.offsetLeft;
-        startTop = targetElement.offsetTop;
-        isDragging = true;
+        startLeft = windowElement.offsetLeft;
+        startTop = windowElement.offsetTop;
+        windowToolControl = true;
     });
     document.addEventListener("mousemove", (e) => {
-        if (!isDragging) return;
+        if (windowToolControl === false) {
+            return;
+        }
         let diffX = e.clientX - startX;
         let diffY = e.clientY - startY;
-        targetElement.style.left = (startLeft + diffX) + "px";
-        targetElement.style.top = (startTop + diffY) + "px";
+        windowElement.style.left = (startLeft + diffX) + "px";
+        windowElement.style.top = (startTop + diffY) + "px";
     });
     document.addEventListener("mouseup", () => {
         if (localStorage.getItem("transition") === "false") {
-            targetElement.style.transition = "none";
+            windowElement.style.transition = "none";
         }
         else {
-            targetElement.style.transition = "";
+            windowElement.style.transition = "";
         }
-        isDragging = false;
+        windowToolControl = false;
     });
 }
-const allWindows = document.querySelectorAll('.window');
-allWindows.forEach((win) => {
-    makeDraggable(win);
+const windows = document.querySelectorAll('.window');
+windows.forEach((windowsForEach) => {
+    windowTool(windowsForEach);
 });
 function closeWindow(windowId) {
     clearTimeout(programTimeout);
@@ -249,21 +261,40 @@ function toggleNoTransition() {
         localStorage.setItem("transition","false");
     }
 }
+loginButton.addEventListener("click",() => {
+    login.style.opacity = "0";
+    login.style.transform = "translate(-50%,-50%) scale(0.7)";
+    setTimeout(() => {
+        login.style.visibility = "hidden";
+    },500)
+})
+function showLogin() {
+    login.style.visibility = "visible";
+    login.style.opacity = "1";
+    login.style.transform = "translate(-50%,-50%) scale(1)";
+    hiddenLaunchpad();
+}
 const timeMain = document.getElementById("time-main");
 const timeDate = document.getElementById("time-date");
+const loginTime = document.getElementById("login-time");
+const loginDate = document.getElementById("login-date");
 function getTime() {
     const dateData = new Date();
     let year = dateData.getFullYear();
     let month = dateData.getMonth() + 1;
-    let day = dateData.getDate();
+    let date = dateData.getDate();
+    let day = dateData.getDay();
     let hour = dateData.getHours();
     let minute = dateData.getMinutes();
     let second = dateData.getSeconds();
     hour = hour.toString().padStart(2,"0");
     minute = minute.toString().padStart(2,"0");
     second = second.toString().padStart(2,"0");
-    timeMain.innerText = `${year}年${month}月${day}日`;
+    const dayConvert = ["日", "一", "二", "三", "四", "五", "六"];
+    timeMain.innerText = `${year}年${month}月${date}日`;
     timeDate.innerText = `${hour}:${minute}:${second}`;
+    loginTime.innerText = `${hour}:${minute}`;
+    loginDate.innerText = `星期${dayConvert[day]} · ${month}月${date}日`
 };
 getTime();
 setInterval(getTime,1000);

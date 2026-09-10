@@ -2,5 +2,5 @@ document.addEventListener("contextmenu",(e) => {
     e.preventDefault();
 })
 setTimeout(() => {
-    location.href="./Login.html";
+    location.href="./Desktop.html";
 },14000)
