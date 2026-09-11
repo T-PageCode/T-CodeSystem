@@ -1,4 +1,4 @@
-body{
+body,html{
     background: linear-gradient(180deg,
     rgb(0, 255, 234),rgb(0,150,255),
     rgb(0, 187, 171), rgb(0, 103, 177));
@@ -11,6 +11,8 @@ body{
     overflow: hidden;
     transition: opacity 0.5s ease,
     background-position 0.5s ease;
+    height: 100%;
+    width: 100%;
 }
 body.dark{
     background-position: 0% 100%;
@@ -469,7 +471,7 @@ body.dark .window-max:active{
 }
 #login-time{
     position: absolute;
-    top: calc(50% - 165px);
+    top: calc(50% - 100px);
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 80px;
@@ -477,14 +479,14 @@ body.dark .window-max:active{
 }
 #login-date{
     position: absolute;
-    top: calc(50% - 100px);
+    top: calc(50% - 25px);
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 20px;
 }
 #login-button{
     position: absolute;
-    top: 50%;
+    top: calc(50% + 50px);
     left: 50%;
     transform: translate(-50%,-50%);
     width: 160px;
