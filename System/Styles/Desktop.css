@@ -33,7 +33,7 @@ body.dark .launchpad-program:hover{
     background-color: rgba(0,0,0,0.3);
 }
 body.dark .launchpad-program:active{
-    background-color: rgba(0,0,0,0.5)
+    background-color: rgba(0,0,0,0.5);
 }
 body.dark .launchpad-program-text{
     color: white;
@@ -44,13 +44,13 @@ body.dark #launchpad-user-image{
 body.dark #launchpad-user-div h1{
     color: white;
 }
-body.dark #shutdown,body.dark #restart{
+body.dark #shutdown,body.dark #restart,body.dark #return-login{
     color: white;
 }
-body.dark #shutdown:hover,body.dark #restart:hover{
+body.dark #shutdown:hover,body.dark #restart:hover,body.dark #return-login:hover{
     background-color: rgba(0,0,0,0.3);
 }
-body.dark #shutdown:active,body.dark #restart:active{
+body.dark #shutdown:active,body.dark #restart:active,body.dark #return-login:active{
     background-color: rgba(0,0,0,0.5);
 }
 body.dark .window{
@@ -86,6 +86,19 @@ body.dark .window-max:hover{
 }
 body.dark .window-max:active{
     background-color: rgba(0,0,0,0.5 );
+}
+body.dark #login{
+    background-color: rgb(0,0,0,0.2);
+}
+body.dark #login-time,body.dark #login-date{
+    color: white;
+}
+body.dark #login-button{
+    background-color: rgb(0,0,0,0.3);
+    color: white;
+}
+body.dark #login-button:hover{
+    background-color: rgb(0,0,0,0.5);
 }
 *{
     margin: 0;
@@ -467,7 +480,8 @@ body.dark .window-max:active{
     opacity: 1;
     visibility: visible;
     transition: opacity 0.5s ease,
-    transform 0.5s ease;
+    transform 0.5s ease,
+    background-color 0.5s ease;
 }
 #login-time{
     position: absolute;
@@ -476,6 +490,7 @@ body.dark .window-max:active{
     transform: translate(-50%,-50%);
     font-size: 80px;
     color: black;
+    transition: color 0.5s ease;
 }
 #login-date{
     position: absolute;
@@ -483,6 +498,8 @@ body.dark .window-max:active{
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 20px;
+    color: black;
+    transition: color 0.5s ease;
 }
 #login-button{
     position: absolute;
@@ -496,7 +513,8 @@ body.dark .window-max:active{
     border-radius: 15px;
     font-size: 17px;
     transition: background-color 0.5s ease,
-    transform 0.5s ease;
+    transform 0.5s ease,
+    color 0.5s ease;
 }
 #login-button:hover{
     background-color: rgb(255,255,255,0.5);
