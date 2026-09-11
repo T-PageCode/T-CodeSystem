@@ -2,7 +2,6 @@ let hideTimer = null;
 let launchpadTime = null;
 let programTimeout = null;
 let mouseTimeout = null;
-const transitionDisabled = localStorage.getItem("transition") === "false";
 const mouse = document.getElementById("mouse");
 const menu = document.getElementById("menu");
 const githubLink = document.getElementById("github-link")
@@ -251,6 +250,7 @@ function toggleFullScreen() {
     }
 }
 function toggleNoTransition() {
+    let transitionDisabled = localStorage.getItem("transition") === "false";
     const elements = document.querySelectorAll("*");
     if (transitionDisabled) {
         elements.forEach(e => e.style.transition = "");
