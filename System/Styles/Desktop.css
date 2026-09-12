@@ -85,20 +85,20 @@ body.dark .window-max:hover{
     background-color: rgba(0,0,0,0.3);
 }
 body.dark .window-max:active{
-    background-color: rgba(0,0,0,0.5 );
+    background-color: rgba(0,0,0,0.5);
 }
 body.dark #login{
-    background-color: rgb(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.2);
 }
 body.dark #login-time,body.dark #login-date{
     color: white;
 }
 body.dark #login-button{
-    background-color: rgb(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.3);
     color: white;
 }
 body.dark #login-button:hover{
-    background-color: rgb(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.5);
 }
 *{
     margin: 0;
