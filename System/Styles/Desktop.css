@@ -114,6 +114,16 @@ body.dark #login-button:hover{
     font-size: 50px;
     color: white;
 }
+#background-text p{
+    position: absolute;
+    top: 90%;
+    left: 100%;
+    transform: translate(-50%,-50%);
+    color: transparent;
+    background: linear-gradient(90deg,yellow,red);
+    background-clip: text;
+    font-size: 30px;
+}
 #taskbar{
     position: fixed;
     left: 50%;
