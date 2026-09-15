@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+    user-select: none;
+}
+p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    margin: 0;
+    font-family: "Simsun";
+    font-size: 15px;
+}
+p span{
+    visibility: visible;
+    animation: animation 1s step-end infinite;
+    margin-left: 4px;
+}
+@keyframes animation{
+    0%,100%{
+        visibility: visible;
+    }
+    50%{
+        visibility: hidden;
+    }
+}
