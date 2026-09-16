@@ -175,7 +175,7 @@ body{
     color: black;
 }
 #btn1:active{
-    transform: translate(-50%,-50%) scale(0.95);
+    transform: translate(-50%,-50%) scale(0.9);
     background-color: rgb(0, 204, 255);
     color: black;
 }
