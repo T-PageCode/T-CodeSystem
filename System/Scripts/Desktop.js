@@ -167,17 +167,18 @@ function startProgram(programName) {
     programID.style.transform = "translate(-50%,-50%) scale(1)";
     hiddenLaunchpad();
 }
-let windowToolControl = null;
 function windowTool(windowElement) {
+    let windowToolControl = null;
     windowToolControl = false;
     let startX,startY,startLeft,startTop;
-    windowElement.addEventListener("mousedown", (e) => {
+    windowElement.addEventListener("mousedown",(e) => {
         if (e.button !== 0){
             return;
         }
         if (e.target.closest(".window-close") || e.target.closest(".window-max")) {
             return;
         }
+        windowElement.parentElement.appendChild(windowElement);
         e.preventDefault();
         windowElement.style.transition = "none";
         startX = e.clientX;
@@ -186,7 +187,7 @@ function windowTool(windowElement) {
         startTop = windowElement.offsetTop;
         windowToolControl = true;
     });
-    document.addEventListener("mousemove", (e) => {
+    document.addEventListener("mousemove",(e) => {
         if (windowToolControl === false) {
             return;
         }
@@ -195,7 +196,7 @@ function windowTool(windowElement) {
         windowElement.style.left = (startLeft + diffX) + "px";
         windowElement.style.top = (startTop + diffY) + "px";
     });
-    document.addEventListener("mouseup", () => {
+    document.addEventListener("mouseup",() => {
         if (localStorage.getItem("transition") === "false") {
             windowElement.style.transition = "none";
         }

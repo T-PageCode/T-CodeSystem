@@ -267,6 +267,11 @@ body.dark #login-button:hover{
     height: 350px;
     border-radius: 25px;
 }
+#about{
+    width: 250px;
+    height: 300px;
+    border-radius: 25px;
+}
 .window{
     position: absolute;
     top: 50%;
@@ -310,6 +315,14 @@ body.dark #login-button:hover{
     transform: translate(-50%,-50%);
 }
 #browser.max{
+    position: fixed !important;
+    top: 0px !important;
+    left: 50% !important;
+    width: 100% !important;
+    height: calc(100% - 100px) !important;
+    transform: translate(-50%,0) !important;
+}
+#about.max{
     position: fixed !important;
     top: 0px !important;
     left: 50% !important;
@@ -483,6 +496,7 @@ body.dark #login-button:hover{
     box-sizing: border-box;
     transition: background-color 0.5s ease,
     color 0.5s ease;
+    z-index: 1;
 }
 #time-div h1{
     margin-top: 5px;
