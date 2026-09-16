@@ -3,4 +3,4 @@ document.addEventListener("contextmenu",(e) => {
 })
 setTimeout(() => {
     location.href="./Desktop.html";
-},14000)
+},10000)

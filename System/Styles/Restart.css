@@ -10,7 +10,7 @@ body{
 }
 h1{
     position: absolute;
-    top: 43%;
+    top: calc(50% - 40px);
     left: 50%;
     transform: translate(-50%,-50%);
     color: white;
@@ -19,30 +19,32 @@ h1{
 }
 #loadbar-div{
     position: absolute;
-    top: 50%;
+    top: calc(50% + 40px);
     left: 50%;
     transform: translate(-50%,-50%);
     width: 300px;
     height: 6px;
     background-color: transparent;
     border-radius: 50px;
+    overflow: hidden;
 }
 #load-bar{
     position: absolute;
     top: 50%;
-    left: 0%;
-    width: 0px;
+    left: -100%;
+    transform: translateY(-50%);
+    width: 300px;
     height: 6px;
     background-color: white;
     border-radius: 50px;
-    animation: load 5s forwards;
+    animation: load 1s forwards infinite;
     animation-delay: 1s;
 }
 @keyframes load{
     from{
-        width: 0px;
+        left: -100%;
     }
     to{
-        width: 300px;
+        left: 100%;
     }
 }

@@ -10,11 +10,11 @@ body{
 }
 #logo{
     position: absolute;
-    top: 40%;
+    top: calc(50% - 90px);
     left: 50%;
     transform: translate(-50%,-50%);
     height: 250px;
-    animation: rotatelogo 5s alternate;
+    animation: rotatelogo 3s alternate;
 }
 @keyframes rotatelogo{
     from{
@@ -26,30 +26,32 @@ body{
 }
 #loadbar-div{
     position: absolute;
-    top: 60%;
+    top: calc(50% + 90px);
     left: 50%;
     transform: translate(-50%,-50%);
     width: 300px;
     height: 6px;
     background-color: transparent;
     border-radius: 50px;
+    overflow: hidden;
 }
 #load-bar{
     position: absolute;
     top: 50%;
-    left: 0%;
-    width: 0px;
+    left: -100%;
+    transform: translateY(-50%);
+    width: 300px;
     height: 6px;
     background-color: white;
     border-radius: 50px;
-    animation: load 5s forwards;
-    animation-delay: 6s;
+    animation: load 1s forwards infinite;
+    animation-delay: 4s;
 }
 @keyframes load{
     from{
-        width: 0px;
+        left: -100%;
     }
     to{
-        width: 300px;
+        left: 100%;
     }
 }

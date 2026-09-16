@@ -44,13 +44,13 @@ body.dark #launchpad-user-image{
 body.dark #launchpad-user-div h1{
     color: white;
 }
-body.dark #shutdown,body.dark #restart,body.dark #return-login{
+body.dark #shutdown,body.dark #restart,body.dark #return-login,body.dark #crash{
     color: white;
 }
-body.dark #shutdown:hover,body.dark #restart:hover,body.dark #return-login:hover{
+body.dark #shutdown:hover,body.dark #restart:hover,body.dark #return-login:hover,body.dark #crash:hover{
     background-color: rgba(0,0,0,0.3);
 }
-body.dark #shutdown:active,body.dark #restart:active,body.dark #return-login:active{
+body.dark #shutdown:active,body.dark #restart:active,body.dark #return-login:active,body.dark #crash:active{
     background-color: rgba(0,0,0,0.5);
 }
 body.dark .window{
