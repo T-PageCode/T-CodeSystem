@@ -476,7 +476,7 @@ body.dark #login-button:hover{
     position: fixed;
     transform: translate(-50%,-50%) scale(0.8);
     width: 180px;
-    height: 275px;
+    height: 277px;
     background-color: rgb(255,255,255,0.6);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
