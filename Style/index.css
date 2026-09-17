@@ -12,18 +12,20 @@ body{
     font-weight: 200;
     margin: 0;
     padding: 0;
+    white-space: nowrap;
 }
 #nav1{
     position: absolute;
-    top: 0px;
-    left: 0px;
-    transform: none;
-    width: 100%;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
     height: 70px;
     background-color: rgb(80,80,80);
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
 }
 #nav1 h3{
     color: white;
