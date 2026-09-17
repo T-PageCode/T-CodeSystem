@@ -20,10 +20,10 @@ body.dark{
 body.dark #taskbar{
     background-color: rgba(0,0,0,0.5);
 }
-body.dark #launchpad-btn:hover{
+body.dark .taskbar-btn:hover{
     background-color: rgba(0,0,0,0.3);
 }
-body.dark #launchpad-btn:active{
+body.dark .taskbar-btn:active{
     background-color: rgba(0,0,0,0.5);
 }
 body.dark #launchpad{
@@ -138,14 +138,13 @@ body.dark #login-button:hover{
     border-radius: 50px;
     transition: background-color 0.5s ease;
 }
-#launchpad-btn{
+#taskbar-about{
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: calc(50% - 70px);
     transform: translate(-50%,-50%);
     height: 85%;
     width: 60px;
-    background-color: transparent;
     overflow: hidden;
     transition: background-color 0.5s ease;
     border-radius: 15px;
@@ -153,10 +152,40 @@ body.dark #login-button:hover{
     align-items: center;
     justify-content: center;
 }
-#launchpad-btn:hover{
+#about-image{
+    position: absolute;
+    background: linear-gradient(180deg,rgb(0,100,255),rgb(0,255,255));
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+#taskbar-about:active #about-image{
+    transform: scale(0.7);
+}
+#launchpad-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 85%;
+    width: 60px;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.taskbar-btn:hover{
     background-color: rgba(255,255,255,0.3);
 }
-#launchpad-btn:active{
+.taskbar-btn:active{
     background-color: rgba(255,255,255,0.5);
 }
 #launchpad-btn:hover img{
