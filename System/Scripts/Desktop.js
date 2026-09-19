@@ -11,6 +11,7 @@ const browser = document.getElementById("browser");
 const launchpadProgram = document.querySelectorAll(".launchpad-program");
 const login = document.getElementById("login");
 const loginButton = document.getElementById("login-button");
+const message = document.getElementById("message");
 function loadTheme() {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {
@@ -84,6 +85,7 @@ function restart() {
     },1000);
 }
 function hiddenLaunchpad() {
+    clearTimeout(launchpadTime);
     launchpad.style.opacity = "0";
     launchpad.style.transform = "translate(-50%,-50%) scale(0.8)";
     launchpadTime = setTimeout(() => {
@@ -120,6 +122,7 @@ document.addEventListener("click",(e) => {
     },500)
 })
 document.addEventListener("click",(e) => {
+    clearTimeout(launchpadTime);
     if (e.target.closest("#launchpad") || e.target.closest("#launchpad-btn")) {
         return;
     }
@@ -267,6 +270,7 @@ loginButton.addEventListener("click",() => {
     login.style.transform = "translate(-50%,-50%) scale(0.7)";
     setTimeout(() => {
         login.style.visibility = "hidden";
+        message.style.animation = "message-show 4s forwards";
     },500)
 })
 function showLogin() {
