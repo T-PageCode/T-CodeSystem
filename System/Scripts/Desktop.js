@@ -178,7 +178,7 @@ function windowTool(windowElement) {
         if (e.button !== 0){
             return;
         }
-        if (e.target.closest(".window-close") || e.target.closest(".window-max")) {
+        if (e.target.closest(".window-close") || e.target.closest(".window-max") || e.target.closest(".window-content")) {
             return;
         }
         windowElement.parentElement.appendChild(windowElement);
