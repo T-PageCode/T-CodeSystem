@@ -104,6 +104,9 @@ body.dark #message{
     color: white;
     background-color: rgb(0,0,0,0.5);
 }
+body.dark .window{
+    color: white;
+}
 *{
     margin: 0;
     padding: 0;
@@ -329,8 +332,10 @@ body.dark #message{
     height 0.5s ease,
     top 0.5s ease,
     left 0.5s ease,
-    background-color 0.5s ease;
+    background-color 0.5s ease,
+    color 0.5s ease;
     overflow: hidden;
+    color: black;
 }
 .window-close{
     position: absolute;
