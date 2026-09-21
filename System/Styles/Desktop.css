@@ -304,6 +304,13 @@ body.dark #message{
     width: 250px;
     height: 300px;
     border-radius: 25px;
+    text-align: center;
+}
+#about h1{
+    margin-top: 40px;
+}
+#about p,#about h3{
+    margin-top: 5px;
 }
 .window{
     position: absolute;
@@ -633,4 +640,11 @@ body.dark #message{
         opacity: 0;
         transform: translateX(257px);
     }
+}
+#version{
+    position: absolute;
+    bottom: 90px;
+    right: 10px;
+    color: white;
+    font-size: 15px;
 }
