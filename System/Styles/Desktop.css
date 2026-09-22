@@ -309,6 +309,9 @@ body.dark .window{
     border-radius: 25px;
     text-align: center;
 }
+#about h1{
+    margin-top: 10px;
+}
 #about p,#about h3{
     margin-top: 5px;
 }
