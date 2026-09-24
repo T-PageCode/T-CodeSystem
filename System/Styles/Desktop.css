@@ -333,7 +333,8 @@ body.dark .window{
     top 0.5s ease,
     left 0.5s ease,
     background-color 0.5s ease,
-    color 0.5s ease;
+    color 0.5s ease,
+    border-radius 0.5s ease;
     overflow: hidden;
     color: black;
 }
@@ -372,6 +373,9 @@ body.dark .window{
     width: 100% !important;
     height: calc(100% - 100px) !important;
     transform: translate(-50%,0) !important;
+    border-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 #about.max{
     position: fixed !important;
@@ -380,6 +384,9 @@ body.dark .window{
     width: 100% !important;
     height: calc(100% - 100px) !important;
     transform: translate(-50%,0) !important;
+    border-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 .window-max{
     position: absolute;
