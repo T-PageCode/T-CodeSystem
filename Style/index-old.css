@@ -92,15 +92,15 @@ body{
     width: 90%;
 }
 #about a{
-    color: rgb(255, 150, 0);
+    color: rgb(42, 188, 255);
     transition: color 0.5s ease;
     text-decoration: none;
 }
 #about a:hover{
-    color: rgb(255, 200, 0);
+    color: rgb(127, 214, 255);
 }
 #about a:active{
-    color: rgb(255, 255, 0);
+    color: rgb(176, 230, 255);
 }
 #about-ok{
     position: absolute;
@@ -111,18 +111,18 @@ body{
     height: 40px;
     border-radius: 15px;
     border: none;
-    background-color: rgb(150, 0, 0);
+    background-color: rgb(140, 242, 255);
     font-size: 18px;
-    color: white;
+    color: black;
     transition: background-color 0.5s ease,
     color 0.5s ease;
 }
 #about-ok:hover{
-    background-color: rgb(200, 0 ,0);
+    background-color: rgb(0, 225, 255);
     color: white;
 }
 #about-ok:active{
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(0, 198, 224);
     color: white;
 }
 #text2{
@@ -134,7 +134,7 @@ body{
     font-size: 50px;
 }
 #text2 span{
-    background: linear-gradient(90deg,rgb(255, 0, 0),rgb(255, 255, 0));
+    background: linear-gradient(90deg,rgb(145, 220, 255),rgb(36, 36, 255));
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -163,7 +163,7 @@ body{
     transform: translate(-50%,-50%) scale(0.85);
     width: 190px;
     height: 50px;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(0, 67, 252);
     color: white;
     border: none;
     transition: background-color 0.3s ease,
@@ -174,13 +174,13 @@ body{
 }
 #btn1:hover{
     transform: translate(-50%,-50%) scale(1);
-    background-color: rgb(200, 0, 0);
-    color: white;
+    background-color: rgb(101, 219, 255);
+    color: black;
 }
 #btn1:active{
     transform: translate(-50%,-50%) scale(0.9);
-    background-color: rgb(150, 0, 0);
-    color: white;
+    background-color: rgb(0, 204, 255);
+    color: black;
 }
 #copyright{
     position: absolute;
