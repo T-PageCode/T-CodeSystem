@@ -354,11 +354,12 @@ body.dark .window{
 .window-close:active{
     background-color: rgba(255,255,255,0.5);
 }
-.window-close span{
+.window-close img{
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    height: 20px;
 }
 .window-content{
     position: absolute;
@@ -407,11 +408,12 @@ body.dark .window{
 .window-max:active{
     background-color: rgb(255,255,255,0.5);
 }
-.window-max span{
+.window-max img{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    height: 25px;
 }
 #shutdown{
     position: absolute;
