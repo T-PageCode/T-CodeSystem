@@ -286,6 +286,7 @@ function showLogin() {
     hiddenLaunchpad();
 }
 const timeMain = document.getElementById("time-main");
+const timeDay = document.getElementById("time-day");
 const timeDate = document.getElementById("time-date");
 const loginTime = document.getElementById("login-time");
 const loginDate = document.getElementById("login-date");
@@ -303,7 +304,8 @@ function getTime() {
     second = second.toString().padStart(2,"0");
     const dayConvert = ["日", "一", "二", "三", "四", "五", "六"];
     timeMain.innerText = `${year}年${month}月${date}日`;
-    timeDate.innerText = `${hour}:${minute}:${second}`;
+    timeDay.innerText = `${hour}:${minute}:${second}`;
+    timeDate.innerText = `今天是星期${dayConvert[day]}`
     loginTime.innerText = `${hour}:${minute}`;
     loginDate.innerText = `星期${dayConvert[day]} · ${month}月${date}日`
 };

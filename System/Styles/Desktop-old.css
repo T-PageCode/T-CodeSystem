@@ -549,21 +549,21 @@ body.dark .window{
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     text-align: center;
-    padding-top: 20px;
+    padding-top: 22.5px;
     color: black;
     box-sizing: border-box;
     transition: background-color 0.5s ease,
     color 0.5s ease;
     z-index: 1;
 }
-#time-div h1{
-    margin-top: 5px;
-}
 #time-main{
     font-size: 25px;
 }
+#time-day{
+    font-size: 28px;
+}
 #time-date{
-    font-size: 22.5px;
+    font-size: 25px;
 }
 #login{
     position: absolute;
