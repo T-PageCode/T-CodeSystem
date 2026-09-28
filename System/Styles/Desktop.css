@@ -56,8 +56,8 @@ body.dark #shutdown:active,body.dark #restart:active,body.dark #return-login:act
 body.dark .window{
     background-color: rgba(0,0,0,0.5);
 }
-body.dark .window-close,body.dark .window-max{
-    color: white;
+body.dark .window-close img,body.dark .window-max img{
+    filter: invert();
 }
 body.dark #menu{
     background-color: rgba(0,0,0,0.6);
@@ -360,6 +360,7 @@ body.dark .window{
     left: 50%;
     transform: translate(-50%,-50%);
     height: 20px;
+    transition: filter 0.5s ease;
 }
 .window-content{
     position: absolute;
@@ -414,6 +415,7 @@ body.dark .window{
     left: 50%;
     transform: translate(-50%,-50%);
     height: 25px;
+    transition: filter 0.5s ease;
 }
 #shutdown{
     position: absolute;
