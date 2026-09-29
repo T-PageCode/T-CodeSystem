@@ -368,6 +368,7 @@ body.dark .window{
     width: 100%;
     height: calc(100% - 30px);
     overflow: auto;
+    scrollbar-width: none;
 }
 .window-content::-webkit-scrollbar{
     width: 0px;
