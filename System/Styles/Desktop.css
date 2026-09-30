@@ -130,6 +130,7 @@ body.dark .window{
     background: linear-gradient(90deg,yellow,red);
     background-clip: text;
     font-size: 30px;
+    white-space: nowrap;
 }
 #taskbar{
     position: fixed;
