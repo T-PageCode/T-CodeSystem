@@ -12,6 +12,7 @@ const launchpadProgram = document.querySelectorAll(".launchpad-program");
 const login = document.getElementById("login");
 const loginButton = document.getElementById("login-button");
 const message = document.getElementById("message");
+const safeMessage = document.getElementById("safe-message");
 function loadTheme() {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {
@@ -277,6 +278,7 @@ loginButton.addEventListener("click",() => {
     setTimeout(() => {
         login.style.visibility = "hidden";
         message.style.animation = "message-show 4s forwards";
+        safeMessage.style.animation = "safe-message-show 4s forwards";
     },500)
 })
 function showLogin() {
