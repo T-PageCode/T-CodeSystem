@@ -259,9 +259,27 @@ body.dark .window{
     height: 90px;
     transform: translate(-50%,-50%);
 }
+#launchpad-tpcsec-image{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+}
 #launchpad-browser{
     top: 20%;
     left: 45%;
+}
+#launchpad-tpcsec{
+    top: 20%;
+    left: 61%;
 }
 .launchpad-program{
     position: absolute;
@@ -279,6 +297,9 @@ body.dark .window{
     background-color: rgb(255,255,255,0.5);
 }
 .launchpad-program:active img{
+    transform: translate(-50%,-50%) scale(0.7);
+}
+.launchpad-program:active #launchpad-tpcsec-image{
     transform: translate(-50%,-50%) scale(0.7);
 }
 .launchpad-program-image{
@@ -652,44 +673,6 @@ body.dark .window{
     transition: background-color 0.5s ease,
     color 0.5s ease;
 }
-#safe-message{
-    position: absolute;
-    top: 300px;
-    right: 10px;
-    transform: translateX(257px);
-    width: 250px;
-    height: 100px;
-    background-color: rgb(255,255,255,0.5);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    border-radius: 25px;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    opacity: 0;
-    transition: background-color 0.5s ease,
-    color 0.5s ease;
-}
-@keyframes safe-message-show{
-    0%{
-        opacity: 0;
-        transform: translateX(257px);
-    }
-    10%{
-        opacity: 1;
-        transform: none;
-    }
-    90%{
-        opacity: 1;
-        transform: none;
-    }
-    100%{
-        opacity: 0;
-        transform: translateX(257px);
-    }
-}
 @keyframes message-show{
     0%{
         opacity: 0;
@@ -713,5 +696,32 @@ body.dark .window{
     bottom: 90px;
     right: 10px;
     color: white;
+    font-size: 15px;
+}
+.desktop-shortcut{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 80px;
+    height: 80px;
+}
+#desktop-tpcsec{
+    top: 80px;
+    left: 80px;
+}
+#desktop-tpcsec-icon{
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.desktop-shortcut-text{
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    white-space: nowrap;
     font-size: 15px;
 }

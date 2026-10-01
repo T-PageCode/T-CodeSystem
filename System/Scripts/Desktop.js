@@ -190,7 +190,7 @@ function windowTool(windowElement) {
         startTop = windowElement.offsetTop;
         windowToolControl = true;
     });
-    windowElement.addEventListener("mousedown",() => {
+    windowElement.addEventListener("mousedown",(e) => {
         if (e.target.closest(".window-close") || e.target.closest(".window-max")) {
             return;
         }
