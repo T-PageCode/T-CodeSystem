@@ -266,7 +266,8 @@ body.dark .window{
     transform: translate(-50%,-50%);
     width: 60px;
     height: 60px;
-    background-color: rgba(255,255,255,0.5);
+    background: linear-gradient(90deg,red,rgb(255,200,0));
+    color: white;
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -701,25 +702,46 @@ body.dark .window{
 .desktop-shortcut{
     position: absolute;
     transform: translate(-50%,-50%);
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
+    transition: background-color 0.5s ease;
+    border-radius: 20px;
+}
+.desktop-shortcut:hover{
+    background-color: rgb(255,255,255,0.5);
+}
+.desktop-shortcut:hover #desktop-tpcsec-icon{
+    filter: brightness(1.2);
+}
+.desktop-shortcut:active{
+    background-color: rgb(255,255,255,0.7);
+}
+.desktop-shortcut:active #desktop-tpcsec-icon{
+    transform: translate(-50%,-50%) scale(0.8);
 }
 #desktop-tpcsec{
     top: 80px;
     left: 80px;
 }
 #desktop-tpcsec-icon{
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translate(-50%,-50%);
     width: 60px;
     height: 60px;
-    background-color: rgba(255,255,255,0.5);
+    background: linear-gradient(90deg,red,rgb(255,200,0));
+    color: white;
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease,
+    filter 0.3s ease;
 }
 .desktop-shortcut-text{
     position: absolute;
-    top: 70px;
+    top: 75px;
     left: 50%;
     transform: translate(-50%,-50%);
     white-space: nowrap;
