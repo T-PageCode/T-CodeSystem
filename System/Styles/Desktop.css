@@ -706,6 +706,7 @@ body.dark .window{
     height: 90px;
     transition: background-color 0.5s ease;
     border-radius: 20px;
+    z-index: 0;
 }
 .desktop-shortcut:hover{
     background-color: rgb(255,255,255,0.5);
