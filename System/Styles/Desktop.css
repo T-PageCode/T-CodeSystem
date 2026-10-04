@@ -135,9 +135,7 @@ body.dark .desktop-shortcut-text{
     top: 90%;
     left: 100%;
     transform: translate(-50%,-50%);
-    color: transparent;
-    background: linear-gradient(90deg,yellow,red);
-    background-clip: text;
+    color: rgb(255,200,00);
     font-size: 30px;
     white-space: nowrap;
 }
