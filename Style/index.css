@@ -26,6 +26,7 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.3));
 }
 #nav1 h3{
     color: black;
@@ -74,6 +75,7 @@ body{
     opacity 0.5s ease;
     border-radius: 25px;
     z-index: 1;
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.3));
 }
 #about h1{
     position: absolute;
