@@ -296,13 +296,16 @@ body.dark .desktop-shortcut-text{
     height: 100px;
     background-color: transparent;
     border-radius: 15px;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease,
+    transform 0.3s ease;
 }
 .launchpad-program:hover{
     background-color: rgb(255,255,255,0.3);
+    transform: translate(-50%,-60%);
 }
 .launchpad-program:active{
     background-color: rgb(255,255,255,0.5);
+    transform: translate(-50%,-50%);
 }
 .launchpad-program:active img{
     transform: translate(-50%,-50%) scale(0.7);
