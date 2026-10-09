@@ -55,6 +55,7 @@ body.dark #shutdown:active,body.dark #restart:active,body.dark #return-login:act
 }
 body.dark .window{
     background-color: rgba(0,0,0,0.5);
+    color: white;
 }
 body.dark .window-close img,body.dark .window-max img{
     filter: invert();
@@ -103,9 +104,6 @@ body.dark #login-button:hover{
 body.dark #message{
     color: white;
     background-color: rgb(0,0,0,0.5);
-}
-body.dark .window{
-    color: white;
 }
 body.dark .desktop-shortcut:hover{
     background-color: rgba(0,0,0,0.3);

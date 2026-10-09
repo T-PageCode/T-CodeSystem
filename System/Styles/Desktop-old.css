@@ -55,6 +55,7 @@ body.dark #shutdown:active,body.dark #restart:active,body.dark #return-login:act
 }
 body.dark .window{
     background-color: rgba(0,0,0,0.5);
+    color: white;
 }
 body.dark .window-close img,body.dark .window-max img{
     filter: invert();
@@ -104,7 +105,13 @@ body.dark #message{
     color: white;
     background-color: rgb(0,0,0,0.5);
 }
-body.dark .window{
+body.dark .desktop-shortcut:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+body.dark .desktop-shortcut:active{
+    background-color: rgba(0,0,0,0.5);
+}
+body.dark .desktop-shortcut-text{
     color: white;
 }
 *{
@@ -706,6 +713,8 @@ body.dark .window{
     height: 90px;
     transition: background-color 0.5s ease;
     border-radius: 20px;
+    z-index: 0;
+    backdrop-filter: blur(5px);
 }
 .desktop-shortcut:hover{
     background-color: rgb(255,255,255,0.5);
