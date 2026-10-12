@@ -721,7 +721,7 @@ body.dark .desktop-shortcut-text{
     background-color: rgba(255,255,255,0.3);
 }
 .desktop-shortcut:hover #desktop-tpcsec-icon{
-    filter: brightness(1.2);
+    transform: translate(-50%,-50%) perspective(800px) rotateY(-360deg);
 }
 .desktop-shortcut:active{
     background-color: rgba(255,255,255,0.5);
