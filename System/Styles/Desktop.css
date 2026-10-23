@@ -332,12 +332,10 @@ body.dark .desktop-shortcut-text{
 #browser{
     width: 600px;
     height: 350px;
-    border-radius: 25px;
 }
 #about{
     width: 250px;
     height: 300px;
-    border-radius: 25px;
     text-align: center;
 }
 #about h1{
@@ -345,6 +343,11 @@ body.dark .desktop-shortcut-text{
 }
 #about p,#about h3{
     margin-top: 5px;
+}
+#security{
+    width: 600px;
+    height: 350px;
+    text-align: center;
 }
 .window{
     position: absolute;
@@ -357,6 +360,7 @@ body.dark .desktop-shortcut-text{
     z-index: 0;
     opacity: 0;
     visibility: hidden;
+    border-radius: 25px;
     transition: opacity 0.5s ease,
     transform 0.5s ease,
     width 0.5s ease,
@@ -417,6 +421,17 @@ body.dark .desktop-shortcut-text{
     border-bottom-right-radius: 20px;
 }
 #about.max{
+    position: fixed !important;
+    top: 0px !important;
+    left: 50% !important;
+    width: 100% !important;
+    height: calc(100% - 100px) !important;
+    transform: translate(-50%,0) !important;
+    border-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#security.max{
     position: fixed !important;
     top: 0px !important;
     left: 50% !important;

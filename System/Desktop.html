@@ -32,7 +32,7 @@
             <img src="../Images/Browser.png" class="launchpad-program-image">
             <p class="launchpad-program-text">浏览器</p>
         </div>
-        <div id="launchpad-tpcsec" class="launchpad-program">
+        <div id="launchpad-tpcsec" class="launchpad-program" onclick="startProgram('security')">
             <div id="launchpad-tpcsec-image">SEC</div>
             <p class="launchpad-program-text">Security</p>
         </div>
@@ -61,6 +61,18 @@
             <h1>浏览器正在开发中</h1>
         </div>
     </div>
+    <div class="window" id="security">
+        <div class="window-close" onclick="closeWindow('security')">
+            <img src="../Images/close.svg">
+        </div>
+        <div class="window-max" onclick="maxWindow('security')">
+            <img src="../Images/max.svg">
+        </div>
+        <div class="window-content">
+            <h1>此系统很安全。</h1>
+            <p>T-PageCode Security</p>
+        </div>
+    </div>
     <div class="window" id="about">
         <div class="window-close" onclick="closeWindow('about')">
             <img src="../Images/close.svg">
@@ -70,11 +82,11 @@
         </div>
         <div class="window-content">
             <h1>T-CodeSystem</h1>
-            <p>版本5.31 Beta 1.00250</p>
+            <p>版本5.31 Stable 1.00258</p>
             <h3>此项目开源在GitHub</h3>
             <p>开源协议：GNU GPL License 3.0</p>
             <h3>T-PageCode Stable</h3>
-            <p>当前处于Beta预览版本</p>
+            <p>当前处于Stable正常版本</p>
             <p>当前是T-CodeSystem新年版本</p>
             <p>&copy;2026 T-PageCode, Dev.</p>
         </div>
@@ -88,8 +100,8 @@
         <h1>2027</h1>
         <p>2027年快要到了!</p>.
     </div>
-    <p id="version">Version T-CodeSystem 5.31 Pre-Release Beta 1.00250-2026-10-20 Codename: Tiger</p>
-    <div class="desktop-shortcut" id="desktop-tpcsec">
+    <p id="version">Code name: Tiger</p>
+    <div class="desktop-shortcut" id="desktop-tpcsec" ondblclick="startProgram('security')">
         <div id="desktop-tpcsec-icon">SEC</div>
         <p class="desktop-shortcut-text">Security</p>
     </div>
