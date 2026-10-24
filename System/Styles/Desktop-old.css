@@ -114,6 +114,23 @@ body.dark .desktop-shortcut:active{
 body.dark .desktop-shortcut-text{
     color: white;
 }
+body.dark #ai input{
+    color: white;
+    background-color: rgba(0,0,0,0.2);
+}
+body.dark #ai input::placeholder{
+    color: rgb(175,175,175);
+}
+body.dark #ai-key-ok{
+    background-color: rgb(0,0,0,0.4);
+    color: white;
+}
+body.dark #ai-key-ok:hover{
+    background-color: rgb(0,0,0,0.6);
+}
+body.dark #ai-key-ok:active{
+    background-color: rgb(0,0,0,0.8);
+}
 *{
     margin: 0;
     padding: 0;
@@ -351,6 +368,59 @@ body.dark .desktop-shortcut-text{
     height: 350px;
     text-align: center;
 }
+#ai{
+    width: 600px;
+    height: 350px;
+    text-align: center;
+}
+#ai h1{
+    position: absolute;
+    top: calc(50% - 50px);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    white-space: nowrap;
+}
+#ai input{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: rgba(255,255,255,0.2);
+    box-sizing: border-box;
+    text-align: center;
+    color: black;
+    transition: color 0.5s ease,
+    background-color 0.5s ease;
+}
+#ai input::placeholder{
+    color: rgb(80,80,80);
+    transition: color 0.5s ease;
+}
+#ai-key-ok{
+    position: absolute;
+    top: calc(50% + 60px);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(255,255,255,0.4);
+    transition: background-color 0.5s ease,
+    color 0.5s ease;
+}
+#ai-key-ok:hover{
+    background-color: rgba(255,255,255,0.6);
+}
+#ai-key-ok:active{
+    background-color: rgba(255,255,255,0.8);
+}
 .window{
     position: absolute;
     top: 50%;
@@ -358,7 +428,6 @@ body.dark .desktop-shortcut-text{
     transform: translate(-50%,-50%) scale(0.8);
     background-color: rgba(255,255,255,0.5);
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     z-index: 0;
     opacity: 0;
     visibility: hidden;
@@ -374,6 +443,9 @@ body.dark .desktop-shortcut-text{
     border-radius 0.5s ease;
     overflow: hidden;
     color: black;
+}
+.window::selection{
+    color: yellow;
 }
 .window-close{
     position: absolute;
@@ -434,6 +506,17 @@ body.dark .desktop-shortcut-text{
     border-bottom-right-radius: 20px;
 }
 #security.max{
+    position: fixed !important;
+    top: 0px !important;
+    left: 50% !important;
+    width: 100% !important;
+    height: calc(100% - 100px) !important;
+    transform: translate(-50%,0) !important;
+    border-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#ai.max{
     position: fixed !important;
     top: 0px !important;
     left: 50% !important;
@@ -737,17 +820,23 @@ body.dark .desktop-shortcut-text{
 .desktop-shortcut:hover{
     background-color: rgb(255,255,255,0.5);
 }
-.desktop-shortcut:hover #desktop-tpcsec-icon{
+.desktop-shortcut:hover #desktop-tpcsec-icon,
+.desktop-shortcut:hover #desktop-tpcai-icon{
     transform: translate(-50%,-50%) perspective(800px) rotateY(-360deg);
 }
 .desktop-shortcut:active{
     background-color: rgb(255,255,255,0.7);
 }
-.desktop-shortcut:active #desktop-tpcsec-icon{
+.desktop-shortcut:active #desktop-tpcsec-icon,
+.desktop-shortcut:active #desktop-tpcai-icon{
     transform: translate(-50%,-50%) scale(0.8);
 }
 #desktop-tpcsec{
     top: 80px;
+    left: 80px;
+}
+#desktop-tpcai{
+    top: 180px;
     left: 80px;
 }
 #desktop-tpcsec-icon{
@@ -758,6 +847,22 @@ body.dark .desktop-shortcut-text{
     width: 60px;
     height: 60px;
     background: linear-gradient(90deg,rgb(0,255,213),rgb(0,255,149));
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease,
+    filter 0.3s ease;
+}
+#desktop-tpcai-icon{
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(90deg,rgb(0,150,255),rgb(150,0,255));
     color: white;
     border-radius: 15px;
     display: flex;

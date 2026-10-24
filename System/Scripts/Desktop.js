@@ -194,6 +194,9 @@ function windowTool(windowElement) {
         if (e.target.closest(".window-close") || e.target.closest(".window-max")) {
             return;
         }
+        if (e.target.closest("input") || e.target.closest("button")) {
+            return;
+        }
         windowElement.parentElement.appendChild(windowElement);
     })
     document.addEventListener("mousemove",(e) => {

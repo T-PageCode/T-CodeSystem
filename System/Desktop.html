@@ -82,13 +82,26 @@
         </div>
         <div class="window-content">
             <h1>T-CodeSystem</h1>
-            <p>版本5.31 Stable 1.00262</p>
+            <p>版本6 Stable 1.00293</p>
             <h3>此项目开源在GitHub</h3>
             <p>开源协议：GNU GPL License 3.0</p>
             <h3>T-PageCode Stable</h3>
             <p>当前处于Stable正常版本</p>
             <p>当前是T-CodeSystem新年版本</p>
             <p>&copy;2026 T-PageCode, Dev.</p>
+        </div>
+    </div>
+    <div class="window" id="ai">
+        <div class="window-close" onclick="closeWindow('ai')">
+            <img src="../Images/close.svg">
+        </div>
+        <div class="window-max" onclick="maxWindow('ai')">
+            <img src="../Images/max.svg">
+        </div>
+        <div class="window-content">
+            <h1>请输入您的API Key，来连接DeepSeek。</h1>
+            <input placeholder="请输入您的API Key" id="api-key">
+            <button id="ai-key-ok">确定</button>
         </div>
     </div>
     <div id="time-div">
@@ -104,6 +117,10 @@
     <div class="desktop-shortcut" id="desktop-tpcsec" ondblclick="startProgram('security')">
         <div id="desktop-tpcsec-icon">SEC</div>
         <p class="desktop-shortcut-text">Security</p>
+    </div>
+    <div class="desktop-shortcut" id="desktop-tpcai" ondblclick="startProgram('ai')">
+        <div id="desktop-tpcai-icon">AI</div>
+        <p class="desktop-shortcut-text">AI</p>
     </div>
 </body>
 </html>
