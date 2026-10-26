@@ -396,6 +396,9 @@ body.dark #ai-key-ok:active{
     transition: color 0.5s ease,
     background-color 0.5s ease;
 }
+#ai input:hover {
+    background-color: rgba(255,255,255,0.4);
+}
 #ai input::placeholder{
     color: rgb(80,80,80);
     transition: color 0.5s ease;
