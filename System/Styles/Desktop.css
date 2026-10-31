@@ -890,3 +890,23 @@ body.dark #ai-key-ok:active{
     transition: color 0.5s ease;
     color: black;
 }
+#halloween{
+    position: absolute;
+    bottom: 60px;
+    left: 80px;
+    transform: translate(-50%,-50%);
+    height: 100px;
+    animation: halloween 4s linear infinite;
+    filter: drop-shadow(0 0 10px black)
+}
+@keyframes halloween{
+    0%{
+        transform: translate(-50%,-50%);
+    }
+    50%{
+        transform: translate(-50%,-50%) perspective(800px) rotateY(360deg);
+    }
+    100%{
+        transform: translate(-50%,-50%);
+    }
+}
