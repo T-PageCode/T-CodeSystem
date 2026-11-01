@@ -12,6 +12,10 @@ const launchpadProgram = document.querySelectorAll(".launchpad-program");
 const login = document.getElementById("login");
 const loginButton = document.getElementById("login-button");
 const message = document.getElementById("message");
+const warningNo = document.getElementById("warning-no");
+const warningButtons = document.querySelectorAll("#warning button");
+const bug = document.getElementById("bug");
+const warning = document.getElementById("warning");
 function loadTheme() {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {
@@ -314,3 +318,20 @@ function getTime() {
 };
 getTime();
 setInterval(getTime,1000);
+warningNo.addEventListener("mouseenter",() => {
+    warningNo.innerText = "确定";
+})
+warningNo.addEventListener("mouseleave",() => {
+    warningNo.innerText = "取消";
+})
+warningButtons.forEach((e) => {
+    e.onclick = () => {
+        document.body.classList.add("go");
+        warning.style.opacity = "0";
+        warning.style.pointerEvents = "none";
+    }
+});
+bug.onclick = () => {
+    document.body.style.pointerEvents = "none";
+    warning.style.opacity = "1";
+}
