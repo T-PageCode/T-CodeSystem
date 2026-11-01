@@ -331,7 +331,8 @@ warningButtons.forEach((e) => {
         warning.style.pointerEvents = "none";
     }
 });
-bug.onclick = () => {
+bug.onclick = (e) => {
     document.body.style.pointerEvents = "none";
+    warning.style.pointerEvents = "auto";
     warning.style.opacity = "1";
 }

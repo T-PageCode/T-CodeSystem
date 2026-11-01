@@ -943,7 +943,6 @@ body.go{
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease;
-    pointer-events: auto !important;
 }
 #warning-buttons{
     display: flex;
