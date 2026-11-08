@@ -785,7 +785,7 @@ body.go{
     height: 40px;
     border: none;
     background-color: rgb(255,255,255,0.3);
-    border-radius: 15px;
+    border-radius: 40px;
     font-size: 17px;
     transition: background-color 0.5s ease,
     transform 0.5s ease,
