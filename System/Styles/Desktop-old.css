@@ -35,6 +35,8 @@ body.dark .taskbar-btn:active{
 }
 body.dark #launchpad{
     background-color: rgba(0,0,0,0.5);
+    box-shadow: 0 0 20px rgb(0,0,0,0.5),
+    inset 0 0 20px rgb(0,0,0,0.5);
 }
 body.dark .launchpad-program:hover{
     background-color: rgba(0,0,0,0.3);
@@ -273,7 +275,10 @@ body.go{
     background-color: rgb(255,255,255,0.5);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
-    border-radius: 25px;
+    border-radius: 40px;
+    border-radius: 40px;
+    box-shadow: 0 0 20px rgb(255,255,255,0.5),
+    inset 0 0 20px rgb(255,255,255,0.5);
     visibility: hidden;
     opacity: 0;
     transition: transform 0.5s ease,
