@@ -408,7 +408,7 @@ body.go{
 }
 #ai h1{
     position: absolute;
-    top: calc(50% - 60px);
+    top: calc(50% - 50px);
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 20px;
@@ -680,7 +680,7 @@ body.go{
 }
 #menu{
     position: fixed;
-    transform: translate(-50%,-50%) scale(0.8);
+    transform: scale(0.8);
     width: 180px;
     height: 277px;
     background-color: rgb(255,255,255,0.6);
@@ -689,10 +689,10 @@ body.go{
     border-radius: 25px;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.5s ease,
-    transform 0.5s ease,
-    top 0.5s ease,
-    left 0.5s ease,
+    transition: opacity 0.3s ease,
+    transform 0.3s ease,
+    top 0.3s ease,
+    left 0.3s ease,
     background-color 0.5s ease,
     box-shadow 0.5s ease;
     z-index: 2;
@@ -709,8 +709,8 @@ body.go{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.5s ease,
-    color 0.5s ease;
+    transition: background-color 0.3s ease,
+    color 0.3s ease;
 }
 .menu-item:hover{
     background-color: rgb(255,255,255,0.3);

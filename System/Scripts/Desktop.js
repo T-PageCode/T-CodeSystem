@@ -2,6 +2,8 @@ let hideTimer = null;
 let launchpadTime = null;
 let programTimeout = null;
 let mouseTimeout = null;
+let originX = null;
+let originY = null;
 const mouse = document.getElementById("mouse");
 const menu = document.getElementById("menu");
 const githubLink = document.getElementById("github-link")
@@ -30,7 +32,7 @@ function loadTheme() {
 loadTheme();
 function hiddenMenu() {
     menu.style.opacity = "0";
-    menu.style.transform = "translate(-50%,-50%) scale(0.8)";
+    menu.style.transform = "scale(0.8)";
     hideTimer = setTimeout(() => {
         menu.style.visibility = "hidden";
     },500)
@@ -110,18 +112,41 @@ document.addEventListener("contextmenu",(e) => {
     clearTimeout(hideTimer);
     let menuX = e.clientX;
     let menuY = e.clientY;
-    menu.style.top = menuY + "px";
-    menu.style.left = menuX + "px";
-    menu.style.visibility = "visible";
-    menu.style.opacity = "1";
-    menu.style.transform = "translate(-50%,-50%) scale(1)";
+    let originX = "left";
+    let originY = "top";
+    if (menuX + 180 > window.innerWidth) {
+        menuX = menuX - 180;
+        originX = "right"
+    }
+    if (menuY + 277 > window.innerHeight) {
+        menuY = menuY - 277;
+        originY = "bottom"
+    }
+    let menuStatus = menu.style.opacity;
+    if (menuStatus === "1") {
+        menu.style.top = menuY + "px";
+        menu.style.left = menuX + "px";
+        menu.style.transformOrigin = `${originX} ${originY}`;
+    }
+    else {
+        menu.style.transition = "none";
+        menu.style.top = menuY + "px";
+        menu.style.left = menuX + "px";
+        menu.style.transformOrigin = `${originX} ${originY}`;
+        menu.style.visibility = "visible";
+        void menu.offsetWidth;
+        menu.style.transition = "";
+        menu.style.opacity = "1";
+        menu.style.transform = "scale(1)";
+    }
+
 })
 document.addEventListener("click",(e) => {
     if (e.target.closest("#menu")) {
         return;
     }
     clearTimeout(hideTimer);
-    menu.style.transform = "translate(-50%,-50%) scale(0.8)";
+    menu.style.transform = "scale(0.8)";
     menu.style.opacity = "0";
     hideTimer = setTimeout(() => {
         menu.style.visibility = "hidden";
