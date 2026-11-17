@@ -9,8 +9,8 @@ body,html{
     -moz-user-select: none;
     -webkit-user-select: none;
     overflow: hidden;
-    transition: opacity 0.5s ease,
-    background-position 0.5s ease;
+    transition: opacity 0.3s ease,
+    background-position 0.3s ease;
     height: 100%;
     width: 100%;
 }
@@ -194,8 +194,8 @@ body.go{
     -webkit-backdrop-filter: blur(5px);
     z-index: 2;
     border-radius: 50px;
-    transition: background-color 0.5s ease,
-    box-shadow 0.5s ease;
+    transition: background-color 0.3s ease,
+    box-shadow 0.3s ease;
     box-shadow: 0 0 20px rgb(255,255,255,0.5),
     inset 0 0 20px rgb(255,255,255,0.5);
 }
@@ -242,8 +242,8 @@ body.go{
     justify-content: center;
 }
 .taskbar-btn{
-    transition: background-color 0.5s ease,
-    box-shadow 0.5s ease;
+    transition: background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .taskbar-btn:hover{
     background-color: rgba(255,255,255,0.3);
@@ -263,7 +263,7 @@ body.go{
 #launchpad-btn img{
     height: 120%;
     transition: transform 0.3s ease,
-    filter 0.5s ease;
+    filter 0.3s ease;
 }
 #launchpad{
     position: absolute;
@@ -281,9 +281,9 @@ body.go{
     inset 0 0 20px rgb(255,255,255,0.5);
     visibility: hidden;
     opacity: 0;
-    transition: transform 0.5s ease,
-    opacity 0.5s ease,
-    background-color 0.5s ease;
+    transition: transform 0.3s ease,
+    opacity 0.3s ease,
+    background-color 0.3s ease;
     z-index: 1;
 }
 #launchpad-user-div{
@@ -299,7 +299,7 @@ body.go{
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 25px;
-    transition: color 0.5s ease;
+    transition: color 0.3s ease;
 }
 #launchpad-user-image{
     position: absolute;
@@ -310,7 +310,7 @@ body.go{
     height: 90px;
     background-color: white;
     border-radius: 25px;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.3s ease;
 }
 #launchpad-user-image img{
     position: absolute;
@@ -332,7 +332,7 @@ body.go{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
 }
 #launchpad-browser{
     top: 20%;
@@ -349,7 +349,7 @@ body.go{
     height: 100px;
     background-color: transparent;
     border-radius: 15px;
-    transition: background-color 0.5s ease,
+    transition: background-color 0.3s ease,
     transform 0.3s ease;
 }
 .launchpad-program:hover{
@@ -382,7 +382,7 @@ body.go{
     font-size: 17px;
     white-space: nowrap;
     color: black;
-    transition: color 0.5s ease;
+    transition: color 0.3s ease;
 }
 #browser{
     width: 600px;
@@ -431,12 +431,12 @@ body.go{
     box-sizing: border-box;
     text-align: center;
     color: black;
-    transition: color 0.5s ease,
-    background-color 0.5s ease;
+    transition: color 0.3s ease,
+    background-color 0.3s ease;
 }
 #ai input::placeholder{
     color: rgb(80,80,80);
-    transition: color 0.5s ease;
+    transition: color 0.3s ease;
 }
 #ai-key-ok{
     position: absolute;
@@ -448,8 +448,8 @@ body.go{
     border-radius: 10px;
     border: none;
     background-color: rgba(255,255,255,0.4);
-    transition: background-color 0.5s ease,
-    color 0.5s ease;
+    transition: background-color 0.3s ease,
+    color 0.3s ease;
 }
 #ai-key-ok:hover{
     background-color: rgba(255,255,255,0.6);
@@ -468,15 +468,15 @@ body.go{
     opacity: 0;
     visibility: hidden;
     border-radius: 25px;
-    transition: opacity 0.5s ease,
-    transform 0.5s ease,
-    width 0.5s ease,
-    height 0.5s ease,
-    top 0.5s ease,
-    left 0.5s ease,
-    background-color 0.5s ease,
-    color 0.5s ease,
-    border-radius 0.5s ease;
+    transition: opacity 0.3s ease,
+    transform 0.3s ease,
+    width 0.3s ease,
+    height 0.3s ease,
+    top 0.3s ease,
+    left 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-radius 0.3s ease;
     overflow: hidden;
     color: black;
 }
@@ -490,8 +490,8 @@ body.go{
     font-size: 30px;
     width: 50px;
     height: 30px;
-    transition: background-color 0.5s ease,
-    color 0.5s ease;
+    transition: background-color 0.3s ease,
+    color 0.3s ease;
 }
 .window-close:hover{
     background-color: rgba(255,255,255,0.3);
@@ -505,7 +505,7 @@ body.go{
     left: 50%;
     transform: translate(-50%,-50%);
     height: 20px;
-    transition: filter 0.5s ease;
+    transition: filter 0.3s ease;
 }
 .window-content{
     position: absolute;
@@ -570,8 +570,8 @@ body.go{
     font-size: 20px;
     width: 50px;
     height: 30px;
-    transition: background-color 0.5s ease,
-    color 0.5s ease;
+    transition: background-color 0.3s ease,
+    color 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -588,7 +588,7 @@ body.go{
     left: 50%;
     transform: translate(-50%,-50%);
     height: 25px;
-    transition: filter 0.5s ease;
+    transition: filter 0.3s ease;
 }
 #shutdown{
     position: absolute;
@@ -659,8 +659,8 @@ body.go{
     background-color: rgb(255,255,255,0.5);
 }
 #shutdown,#restart,#return-login,#crash{
-    transition: background-color 0.5s ease,
-    color 0.5s ease;
+    transition: background-color 0.3s ease,
+    color 0.3s ease;
 }
 #mouse{
     position: fixed;
@@ -693,8 +693,8 @@ body.go{
     transform 0.3s ease,
     top 0.3s ease,
     left 0.3s ease,
-    background-color 0.5s ease,
-    box-shadow 0.5s ease;
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
     z-index: 2;
     box-shadow: 0 0 20px rgb(255,255,255,0.5),
     inset 0 0 20px rgb(255,255,255,0.5);
@@ -733,8 +733,8 @@ body.go{
     padding-top: 22.5px;
     color: black;
     box-sizing: border-box;
-    transition: background-color 0.5s ease,
-    color 0.5s ease;
+    transition: background-color 0.3s ease,
+    color 0.3s ease;
     z-index: 1;
 }
 #time-main{
@@ -759,9 +759,9 @@ body.go{
     z-index: 3;
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.5s ease,
-    transform 0.5s ease,
-    background-color 0.5s ease;
+    transition: opacity 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 #login-time{
     position: absolute;
@@ -770,7 +770,7 @@ body.go{
     transform: translate(-50%,-50%);
     font-size: 80px;
     color: black;
-    transition: color 0.5s ease;
+    transition: color 0.3s ease;
 }
 #login-date{
     position: absolute;
@@ -779,7 +779,7 @@ body.go{
     transform: translate(-50%,-50%);
     font-size: 20px;
     color: black;
-    transition: color 0.5s ease;
+    transition: color 0.3s ease;
 }
 #login-button{
     position: absolute;
@@ -792,10 +792,10 @@ body.go{
     background-color: rgb(255,255,255,0.3);
     border-radius: 40px;
     font-size: 17px;
-    transition: background-color 0.5s ease,
-    transform 0.5s ease,
-    color 0.5s ease,
-    box-shadow 0.5s ease;
+    transition: background-color 0.3s ease,
+    transform 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
     box-shadow: 1px 1px rgba(255,255,255,0.3),
     1px -1px rgba(255,255,255,0.3),
     -1px 1px rgba(255,255,255,0.2),
@@ -824,8 +824,8 @@ body.go{
     align-items: center;
     flex-direction: column;
     opacity: 0;
-    transition: background-color 0.5s ease,
-    color 0.5s ease;
+    transition: background-color 0.3s ease,
+    color 0.3s ease;
 }
 @keyframes message-show{
     0%{
@@ -857,7 +857,7 @@ body.go{
     transform: translate(-50%,-50%);
     width: 90px;
     height: 90px;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.3s ease;
     border-radius: 20px;
     z-index: 0;
     backdrop-filter: blur(5px);
@@ -897,7 +897,7 @@ body.go{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.5s ease,
+    transition: transform 0.3s ease,
     filter 0.3s ease;
 }
 #desktop-tpcai-icon{
@@ -913,7 +913,7 @@ body.go{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.5s ease,
+    transition: transform 0.3s ease,
     filter 0.3s ease;
 }
 .desktop-shortcut-text{
@@ -922,7 +922,7 @@ body.go{
     left: 50%;
     transform: translate(-50%,-50%);
     white-space: nowrap;
-    transition: color 0.5s ease;
+    transition: color 0.3s ease;
     font-size: 15px;
 }
 #bug{
@@ -935,7 +935,7 @@ body.go{
     height: 30px;
     background-color: rgb(100,0,0);
     border-radius: 10px;
-    transition: filter 0.5s ease;
+    transition: filter 0.3s ease;
     color: white;
     display: flex;
     align-items: center;
@@ -963,7 +963,7 @@ body.go{
     justify-content: center;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.3s ease;
 }
 #warning-buttons{
     display: flex;
@@ -979,7 +979,7 @@ body.go{
     font-size: 15px;
     width: 90px;
     height: 30px;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.3s ease;
 }
 #warning button:hover{
     background-color: rgb(100,0,0);
