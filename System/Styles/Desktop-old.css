@@ -411,11 +411,11 @@ body.go{
 }
 #ai h1{
     position: absolute;
-    top: calc(50% - 50px);
+    top: calc(50% - 60px);
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 20px;
-    white-space: nowrap;
+    width: 90%;
 }
 #ai input{
     position: absolute;
