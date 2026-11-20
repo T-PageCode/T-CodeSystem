@@ -1,8 +1,10 @@
 import os
 from flask import Flask, send_from_directory
 
+# Info
 os.system('powershell -Command Write-Host "Starting Local server..." -ForegroundColor darkgray')
 
+# Flask code
 basedir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 app = Flask(__name__, static_folder=basedir, static_url_path='')
