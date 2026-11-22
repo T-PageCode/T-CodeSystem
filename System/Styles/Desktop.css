@@ -160,7 +160,7 @@ body.go{
 *{
     margin: 0;
     padding: 0;
-    font-weight: 200;
+    font-weight: 300;
 }
 #background-text{
     position: fixed;
@@ -196,6 +196,22 @@ body.go{
     box-shadow 0.3s ease;
     box-shadow: 0 0 20px rgb(255,255,255,0.5),
     inset 0 0 20px rgb(255,255,255,0.5);
+}
+#time-main{
+    position: absolute;
+    top: 70%;
+    left: 90%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    white-space: nowrap;
+}
+#time-date{
+    position: absolute;
+    top: 30%;
+    left: 90%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    white-space: nowrap;
 }
 #taskbar-about{
     position: absolute;
@@ -718,32 +734,23 @@ body.go{
 .menu-item:active{
     background-color: rgb(255,255,255,0.5);
 }
-#time-div{
+#island{
     position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 250px;
-    height: 150px;
-    background-color: rgba(255,255,255,0.5);
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 180px;
+    height: 40px;
+    background-color: rgb(0,0,0);
     border-radius: 25px;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    text-align: center;
-    padding-top: 22.5px;
-    color: black;
-    box-sizing: border-box;
-    transition: background-color 0.3s ease,
-    color 0.3s ease;
-    z-index: 1;
-}
-#time-main{
-    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 3;
 }
 #time-day{
-    font-size: 28px;
-}
-#time-date{
-    font-size: 25px;
+    font-size: 20px;
 }
 #login{
     position: absolute;

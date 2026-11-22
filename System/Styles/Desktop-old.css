@@ -160,7 +160,7 @@ body.go{
 *{
     margin: 0;
     padding: 0;
-    font-weight: 200;
+    font-weight: 300;
 }
 #background-text{
     position: fixed;
@@ -198,6 +198,22 @@ body.go{
     box-shadow 0.3s ease;
     box-shadow: 0 0 20px rgb(255,255,255,0.5),
     inset 0 0 20px rgb(255,255,255,0.5);
+}
+#time-main{
+    position: absolute;
+    top: 70%;
+    left: 90%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    white-space: nowrap;
+}
+#time-date{
+    position: absolute;
+    top: 30%;
+    left: 90%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    white-space: nowrap;
 }
 #taskbar-about{
     position: absolute;
@@ -275,7 +291,6 @@ body.go{
     background-color: rgb(255,255,255,0.5);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
-    border-radius: 40px;
     border-radius: 40px;
     box-shadow: 0 0 20px rgb(255,255,255,0.5),
     inset 0 0 20px rgb(255,255,255,0.5);
@@ -698,7 +713,6 @@ body.go{
     z-index: 2;
     box-shadow: 0 0 20px rgb(255,255,255,0.5),
     inset 0 0 20px rgb(255,255,255,0.5);
-    transform-origin: top left;
 }
 .menu-item{
     background-color: transparent;
@@ -719,32 +733,23 @@ body.go{
 .menu-item:active{
     background-color: rgb(255,255,255,0.5);
 }
-#time-div{
+#island{
     position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 250px;
-    height: 150px;
-    background-color: rgba(255,255,255,0.5);
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 180px;
+    height: 40px;
+    background-color: rgb(0,0,0);
     border-radius: 25px;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    text-align: center;
-    padding-top: 22.5px;
-    color: black;
-    box-sizing: border-box;
-    transition: background-color 0.3s ease,
-    color 0.3s ease;
-    z-index: 1;
-}
-#time-main{
-    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 3;
 }
 #time-day{
-    font-size: 28px;
-}
-#time-date{
-    font-size: 25px;
+    font-size: 20px;
 }
 #login{
     position: absolute;
@@ -863,14 +868,14 @@ body.go{
     backdrop-filter: blur(5px);
 }
 .desktop-shortcut:hover{
-    background-color: rgb(255,255,255,0.5);
+    background-color: rgb(255,255,255,0.3);
 }
 .desktop-shortcut:hover #desktop-tpcsec-icon,
 .desktop-shortcut:hover #desktop-tpcai-icon{
     transform: translate(-50%,-50%) perspective(800px) rotateY(-360deg);
 }
 .desktop-shortcut:active{
-    background-color: rgb(255,255,255,0.7);
+    background-color: rgb(255,255,255,0.5);
 }
 .desktop-shortcut:active #desktop-tpcsec-icon,
 .desktop-shortcut:active #desktop-tpcai-icon{

@@ -340,7 +340,7 @@ function getTime() {
     const dayConvert = ["日", "一", "二", "三", "四", "五", "六"];
     timeMain.innerText = `${year}年${month}月${date}日`;
     timeDay.innerText = `${hour}:${minute}:${second}`;
-    timeDate.innerText = `今天是星期${dayConvert[day]}`
+    timeDate.innerText = `星期${dayConvert[day]}`
     loginTime.innerText = `${hour}:${minute}`;
     loginDate.innerText = `星期${dayConvert[day]} · ${month}月${date}日`
 };
