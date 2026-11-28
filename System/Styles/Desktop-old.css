@@ -816,7 +816,7 @@ body.go{
 }
 #message{
     position: absolute;
-    top: 180px;
+    top: 10px;
     right: 10px;
     transform: translateX(257px);
     width: 250px;
